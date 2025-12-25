@@ -1,52 +1,170 @@
-# PopsBingo
+# 🎄 Pop's Christmas Bingo
 
-A tribute to a self-taught dad who wrote a family Bingo game in the late 1980s—before most homes even had PCs. For thirty Christmases, this program has called out numbers in living rooms packed with kids, cousins, and grandkids. Now it lives here so the tradition can keep growing.
+**A 30+ year family tradition, preserved in code.**
 
-## Quick start
-The current build is a lightweight web app. No tooling is required—open `index.html` in any modern browser and start calling numbers.
+Every Christmas since the late 1980s, our family has gathered around a glowing screen to play Bingo. Not with store-bought cards and a plastic tumbler—but with custom software built by Pop, calling out numbers in his own recorded voice.
 
-1. Open `index.html` in your browser.
-2. Click **Generate New Card** to get a fresh 5x5 board (free center space is pre-marked).
-3. Click **Call Next Number** to pull a random ball from the 1–75 pool. Called numbers show in the history list and mark themselves on the card automatically.
-4. When a full row, column, or diagonal is marked, the app declares **BINGO!** and plays the bingo sound.
-5. Use **Reset Session** to reshuffle the call order and clear the history without changing the card.
+This is that program, reborn for the modern web.
 
-## Local testing
-If you want to serve the page instead of double-clicking the file (helpful for consistent audio behavior across browsers), run a tiny static server from the repo root and open the local address:
+---
+
+## The Original Machine
+
+![The Halikan Luggable PC](pops_bingo_brief/halikan_luggable.jpeg)
+
+*The Halikan "luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
+
+---
+
+## The Man Behind the Code
+
+**Nick DeMarco** wasn't a professional software engineer. He never took a programming class. He was a self-taught tinkerer—the kind of person who looked at a problem and thought, *"I can build that."*
+
+In the late 1980s, when most families didn't even have a computer in their home, Pop sat down at this Halikan luggable running **MS-DOS 5** and wrote `BINGO.EXE`. He didn't just write the game logic—he recorded his own voice for every single bingo call.
+
+**75 audio files.** B-1 through O-75. Each one captured in raw PCM format and saved to the hard drive with names like `B12`, `N31`, `O68`—no file extensions, just pure data.
+
+---
+
+## The Files
+
+![DOS Directory Listing](pops_bingo_brief/bingo_dir_listing.jpeg)
+
+*The `C:\BINGO` directory listing from the original machine. 83 files totaling just 632KB—including BINGO.EXE, BINGOCARD.EXE, and all 75 of Pop's voice recordings.*
+
+Look at that directory listing. Each of those cryptic filenames—`B1`, `I16`, `N31`, `G46`, `O61`—is Pop's voice, frozen in time. When you called a number, the ISA "Big Mouth" sound card would stream that raw audio data and Pop would announce: *"B... twelve!"*
+
+---
+
+## The Christmas Tradition
+
+For over **30 years**, this program has been the heartbeat of our family's Christmas gatherings.
+
+The ritual never changed:
+1. Boot up the Halikan
+2. Run `BINGO.BAT`
+3. Print out cards on the dot-matrix printer
+4. Crowd around the screen—kids, cousins, aunts, uncles, grandkids
+5. Listen for Pop's voice calling the numbers
+6. **"BINGO!"**—followed by cheers, groans, and accusations of cheating
+
+The laughter. The rivalries. The kids fighting over who gets to click the button. That's what this code really is—not algorithms and audio files, but three decades of family memories.
+
+---
+
+## The Preservation Project
+
+The Halikan still works. Thirty-five years later, it still boots, still runs BINGO.EXE, still plays Pop's voice.
+
+But hardware doesn't last forever. So we're preserving it:
+
+1. **Extract** Pop's original voice files from the IDE hard drive
+2. **Convert** the raw PCM audio to modern `.wav` format
+3. **Rebuild** the game as a web app that runs anywhere
+4. **Keep his voice alive** in every call
+
+This repository is that effort. The Christmas 2024 version features a festive new look with falling snow, glowing ornament-style numbers, and—most importantly—the same voice that's been calling Bingo for three decades.
+
+---
+
+## Quick Start
+
+No installation required. Just open in a browser:
 
 ```bash
+# Clone the repository
+git clone https://github.com/yourusername/PopsBingo.git
+cd PopsBingo
+
+# Start a local server (for audio to work properly)
 python3 -m http.server 8000
+
+# Open in your browser
+open http://localhost:8000
 ```
 
-Then visit [http://localhost:8000/](http://localhost:8000/) in your browser. Use the **Call sound** and **Bingo sound** file pickers to load your dad’s audio files; otherwise the fallback tones will play.
+Or simply open `index.html` directly in any modern browser.
 
-## Using your dad's audio files
-You can swap in personal audio without editing code:
-- Under **Game Controls**, use the **Call sound** file picker to choose the clip that should play every time a new ball is called.
-- Use the **Bingo sound** file picker to select the celebratory clip for a winning card.
-- The app falls back to a built-in tone if no file is loaded so you can test without assets.
+### Controls
+- **Call Number** (or press `Space`) — Call the next random number
+- **New Game** — Reset and start fresh
+- Voice files auto-load from the `audio/` folder
 
-## How it works
-- Numbers follow the standard Bingo ranges (B 1–15, I 16–30, N 31–45, G 46–60, O 61–75).
-- Cards are regenerated on demand with a free center space already marked.
-- Called numbers are stored, rendered in reverse order, and highlighted on the card when applicable.
-- Winning lines (rows, columns, diagonals) are outlined to make it obvious where the Bingo happened.
+---
 
-## The Story
-- **Built by Dad:** He wasn’t a professional engineer. He was simply curious and stubborn enough to learn how to code on his own and figured out how to ship a Bingo game when doing that in the 80s was rare.
-- **Christmas staple:** Every December, the ritual was the same—boot up the program, print cards, and crowd around the screen. The laughter, the rivalries, the “BINGO!” shouts all trace back to his keyboard.
-- **Legacy preserved:** This repository is a way to honor his creativity and keep the game alive for future holidays. Sharing it publicly is an invitation for others to feel the same spark of curiosity he passed down.
+## Using Pop's Voice Files
 
-## How to contribute
-1. Fork the repo and clone it locally.
-2. Open an issue if you have stories, bug reports, or feature ideas that keep with the game’s spirit.
-3. Submit a pull request with your changes. Be sure to describe how your update keeps the family-fun vibe intact.
+The app automatically loads voice files from the `audio/` folder on startup.
 
-## Ideas for future updates
-- Add a lobby so multiple players can join remotely.
-- Support printable cards so grandparents can play offline.
-- Offer themes (holidays, birthdays) that align with your family traditions.
-- Document the original implementation details as we uncover them.
+### Current Setup
+The repository includes placeholder audio files generated with macOS text-to-speech. These work for testing, but the real magic is Pop's voice.
+
+### Adding Pop's Original Voice
+Once we extract the files from the Halikan:
+
+1. Convert the raw PCM files to `.wav` format
+2. Name them: `B1.wav`, `B2.wav`, ... `O75.wav`
+3. Replace the files in the `audio/` folder
+4. Refresh the page
+
+The voice status indicator will show **"Pop's Voice Ready!"** when all 75 files are loaded.
+
+---
+
+## Technical Details
+
+### Bingo Rules (75-Ball)
+| Letter | Numbers |
+|--------|---------|
+| B | 1–15 |
+| I | 16–30 |
+| N | 31–45 |
+| G | 46–60 |
+| O | 61–75 |
+
+### Original Audio Format
+Pop's files are likely:
+- Raw PCM, 8-bit unsigned
+- Mono, 11.025 kHz sample rate
+- No headers (hence no file extensions)
+
+To convert with SoX:
+```bash
+sox -r 11025 -c 1 -b 8 -e unsigned-integer B12 B12.wav
+```
+
+---
+
+## The Legacy
+
+This isn't just code. It's a family artifact.
+
+Pop showed us that you don't need a computer science degree to build something meaningful. You don't need permission. You just need curiosity, stubbornness, and the desire to make something your family will love.
+
+Every time this app calls a number, it carries forward that spirit. A self-taught engineer's gift to his family, echoing through the decades.
+
+---
+
+## For Other Families
+
+If you grew up with a parent who tinkered—who built things, fixed things, figured things out—this project is for you too.
+
+Fork it. Customize it. Record your own voice. Start your own tradition.
+
+The best software isn't always the most sophisticated. Sometimes it's the program that makes your family laugh together every Christmas for thirty years.
+
+---
 
 ## Gratitude
-If you grew up with a parent who taught you to be curious, this project is for you. Every line of code here is a thank-you to the dad who showed that you don’t need permission to make something your family loves.
+
+To Pop, who taught us that making something yourself is always better than buying it.
+
+To the family members who kept the Halikan running all these years.
+
+And to everyone who understands that the best code is written with love.
+
+**Merry Christmas.** 🎄
+
+---
+
+*Built with curiosity, preserved with love.*
