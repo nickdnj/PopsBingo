@@ -4,23 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pops Bingo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Luckiest+Guy&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
   <div class="page">
+    <div class="snow-drift" aria-hidden="true"></div>
+    <div class="snow" aria-hidden="true"></div>
     <header class="hero">
       <div class="hero__text">
-        <p class="eyebrow">Christmas Eve Tradition</p>
-        <h1>Pop DeMarco's Christmas Bingo Caller</h1>
-        <p class="lede">We ditched the cards and built a big, bright wall of ornaments so you can call out every ball from B1 through O75. Tap to call the next number and watch it light up like a tree.</p>
+        <p class="eyebrow">North Pole Party Night</p>
+        <h1>Santa's Merry Bingo Caller</h1>
+        <p class="lede">
+          Call every ball from B1 through O75 on a screen that feels like a cozy fireside game night.
+          Each number glows like an ornament, with snow falling while you play.
+        </p>
         <div class="hero__actions">
           <button id="heroCallBtn" class="button button--primary">Call Next Number</button>
           <button id="heroResetBtn" class="button button--ghost">Reset Session</button>
         </div>
+        <ul class="hero__badges" aria-label="Holiday feature highlights">
+          <li>❄️ Snowy, festive layout inspired by the bingo wall at letsplaybingo.io</li>
+          <li>🎅 Upload your own ho-ho-holiday sound effects</li>
+          <li>🦌 Bright ornaments, candy stripes, and cozy gingerbread tones</li>
+        </ul>
       </div>
       <div class="hero__card" aria-hidden="true">
         <div class="callout">Ho Ho Hooooo!</div>
         <p class="hero__note">Pop's festive caller keeps every ball in sight.</p>
+        <div class="hero__mini-card">
+          <p class="mini-label">Tonight's magic</p>
+          <ul>
+            <li>Frosted queue of upcoming calls</li>
+            <li>Tree lights flash on the latest number</li>
+            <li>Warm copper glow for past calls</li>
+          </ul>
+        </div>
       </div>
     </header>
 
