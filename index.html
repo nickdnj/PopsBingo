@@ -11,28 +11,29 @@
     <header class="hero">
       <div class="hero__text">
         <p class="eyebrow">Christmas Eve Tradition</p>
-        <h1>Pop DeMarco's Christmas Bingo</h1>
-        <p class="lede">Keep the DeMarco Christmas Eve magic alive with Nick "Pop" DeMarco calling the shots. Generate fresh cards, call numbers, and celebrate wins with sounds from Pop.</p>
+        <h1>Pop DeMarco's Christmas Bingo Caller</h1>
+        <p class="lede">We ditched the cards and built a big, bright wall of ornaments so you can call out every ball from B1 through O75. Tap to call the next number and watch it light up like a tree.</p>
         <div class="hero__actions">
-          <button id="newCardBtn" class="button">Generate New Card</button>
-          <button id="resetBtn" class="button button--ghost">Reset Session</button>
+          <button id="heroCallBtn" class="button button--primary">Call Next Number</button>
+          <button id="heroResetBtn" class="button button--ghost">Reset Session</button>
         </div>
       </div>
       <div class="hero__card" aria-hidden="true">
-        <div class="callout">FREE SPACE</div>
-        <p class="hero__note">Center tile stays marked so Pop's cheer stays with you.</p>
+        <div class="callout">Ho Ho Hooooo!</div>
+        <p class="hero__note">Pop's festive caller keeps every ball in sight.</p>
       </div>
     </header>
 
     <main class="layout">
       <section class="panel" aria-labelledby="controls-heading">
         <div class="panel__header">
-          <h2 id="controls-heading">Game Controls</h2>
-          <p class="muted">Call the next number or load Pop's favorite Christmas calls.</p>
+          <h2 id="controls-heading">Caller Controls</h2>
+          <p class="muted">Call the next number and add holiday sounds.</p>
         </div>
         <div class="controls">
           <div class="controls__actions">
             <button id="callBtn" class="button button--primary">Call Next Number</button>
+            <button id="resetBtn" class="button button--ghost">Reset Session</button>
             <div class="inline-info">
               <span class="label">Remaining</span>
               <strong id="remainingCount">75</strong>
@@ -47,7 +48,7 @@
             <div class="control-group">
               <label for="bingoAudio">Bingo sound</label>
               <input id="bingoAudio" type="file" accept="audio/*" />
-              <p class="help">Plays automatically once a Bingo is detected.</p>
+              <p class="help">Plays when all numbers have been called.</p>
             </div>
           </div>
         </div>
@@ -56,21 +57,12 @@
         </div>
       </section>
 
-      <section class="panel" aria-labelledby="card-heading">
+      <section class="panel panel--tall" aria-labelledby="board-heading">
         <div class="panel__header">
-          <h2 id="card-heading">Your Bingo Card</h2>
-          <p class="muted">Numbers mark themselves as you call them.</p>
+          <h2 id="board-heading">Bingo Ball Board</h2>
+          <p class="muted">Every ball from B1 to O75 lights up when called.</p>
         </div>
-        <div class="card" role="grid" aria-label="Bingo card">
-          <div class="card__header" role="row">
-            <span class="card__cell" role="columnheader">B</span>
-            <span class="card__cell" role="columnheader">I</span>
-            <span class="card__cell" role="columnheader">N</span>
-            <span class="card__cell" role="columnheader">G</span>
-            <span class="card__cell" role="columnheader">O</span>
-          </div>
-          <div id="cardBody" class="card__body"></div>
-        </div>
+        <div class="board" id="boardGrid" aria-live="polite"></div>
       </section>
 
       <section class="panel panel--tall" aria-labelledby="history-heading">
