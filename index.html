@@ -25,7 +25,7 @@
     </header>
 
     <main class="layout">
-      <section class="panel" aria-labelledby="controls-heading">
+      <section class="panel panel--controls" aria-labelledby="controls-heading">
         <div class="panel__header">
           <h2 id="controls-heading">Caller Controls</h2>
           <p class="muted">Call the next number and add holiday sounds.</p>
@@ -57,7 +57,7 @@
         </div>
       </section>
 
-      <section class="panel panel--tall" aria-labelledby="board-heading">
+      <section class="panel panel--tall panel--board" aria-labelledby="board-heading">
         <div class="panel__header">
           <h2 id="board-heading">Bingo Ball Board</h2>
           <p class="muted">Every ball from B1 to O75 lights up when called.</p>
@@ -65,12 +65,20 @@
         <div class="board" id="boardGrid" aria-live="polite"></div>
       </section>
 
-      <section class="panel panel--tall" aria-labelledby="history-heading">
+      <section class="panel panel--tall panel--history" aria-labelledby="history-heading">
         <div class="panel__header">
           <h2 id="history-heading">Number History</h2>
           <p class="muted">Track what has already been called.</p>
         </div>
         <div class="history" id="historyList" aria-live="polite"></div>
+      </section>
+
+      <section class="panel panel--tall panel--queue" aria-labelledby="queue-heading">
+        <div class="panel__header">
+          <h2 id="queue-heading">Numbers to Be Called</h2>
+          <p class="muted">See the full remaining queue in call order.</p>
+        </div>
+        <div class="queue" id="queueList" aria-live="polite"></div>
       </section>
     </main>
   </div>
