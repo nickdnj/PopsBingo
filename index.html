@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pops Bingo</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero__text">
+        <p class="eyebrow">Family Bingo Night</p>
+        <h1>Pops Bingo Caller</h1>
+        <p class="lede">Run a full Bingo night experience and drop in your dad's audio once you have it. Generate fresh cards, call numbers, and celebrate wins with sound.</p>
+        <div class="hero__actions">
+          <button id="newCardBtn" class="button">Generate New Card</button>
+          <button id="resetBtn" class="button button--ghost">Reset Session</button>
+        </div>
+      </div>
+      <div class="hero__card" aria-hidden="true">
+        <div class="callout">FREE SPACE</div>
+        <p class="hero__note">Center tile stays marked.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel" aria-labelledby="controls-heading">
+        <div class="panel__header">
+          <h2 id="controls-heading">Game Controls</h2>
+          <p class="muted">Call the next number or load your dad's audio clips.</p>
+        </div>
+        <div class="controls">
+          <div class="controls__actions">
+            <button id="callBtn" class="button button--primary">Call Next Number</button>
+            <div class="inline-info">
+              <span class="label">Remaining</span>
+              <strong id="remainingCount">75</strong>
+            </div>
+          </div>
+          <div class="controls__audio">
+            <div class="control-group">
+              <label for="callAudio">Call sound</label>
+              <input id="callAudio" type="file" accept="audio/*" />
+              <p class="help">Plays every time a new ball is called.</p>
+            </div>
+            <div class="control-group">
+              <label for="bingoAudio">Bingo sound</label>
+              <input id="bingoAudio" type="file" accept="audio/*" />
+              <p class="help">Plays automatically once a Bingo is detected.</p>
+            </div>
+          </div>
+        </div>
+        <div class="status" role="status" aria-live="polite">
+          <p id="statusText">Waiting to start&hellip;</p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="card-heading">
+        <div class="panel__header">
+          <h2 id="card-heading">Your Bingo Card</h2>
+          <p class="muted">Numbers mark themselves as you call them.</p>
+        </div>
+        <div class="card" role="grid" aria-label="Bingo card">
+          <div class="card__header" role="row">
+            <span class="card__cell" role="columnheader">B</span>
+            <span class="card__cell" role="columnheader">I</span>
+            <span class="card__cell" role="columnheader">N</span>
+            <span class="card__cell" role="columnheader">G</span>
+            <span class="card__cell" role="columnheader">O</span>
+          </div>
+          <div id="cardBody" class="card__body"></div>
+        </div>
+      </section>
+
+      <section class="panel panel--tall" aria-labelledby="history-heading">
+        <div class="panel__header">
+          <h2 id="history-heading">Number History</h2>
+          <p class="muted">Track what has already been called.</p>
+        </div>
+        <div class="history" id="historyList" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+
+  <audio id="callSound" preload="auto"></audio>
+  <audio id="bingoSound" preload="auto"></audio>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
