@@ -13,6 +13,7 @@ const elements = {
   resetBtn: document.getElementById("resetBtn"),
   remainingCount: document.getElementById("remainingCount"),
   historyList: document.getElementById("historyList"),
+  queueList: document.getElementById("queueList"),
   statusText: document.getElementById("statusText"),
   boardGrid: document.getElementById("boardGrid"),
   callAudio: document.getElementById("callAudio"),
@@ -38,6 +39,7 @@ function buildCallOrder() {
   callOrder = shuffle(Array.from({ length: 75 }, (_, i) => i + 1));
   calledNumbers = [];
   updateHistory();
+  updateQueue();
   updateRemaining();
   updateStatus("Waiting to start…");
   updateBoardState(null);
@@ -71,6 +73,19 @@ function updateHistory() {
       historyItem.innerHTML = `<span>${letter}</span><strong>${number}</strong>`;
       elements.historyList.appendChild(historyItem);
     });
+}
+
+function updateQueue() {
+  elements.queueList.innerHTML = "";
+  const remainingOrder = callOrder.slice().reverse();
+
+  remainingOrder.forEach((number, index) => {
+    const queueItem = document.createElement("div");
+    queueItem.className = "queue__item";
+    const letter = getLetterForNumber(number);
+    queueItem.innerHTML = `<span>${index === 0 ? "Next" : "In line"}</span><strong>${letter}${number}</strong>`;
+    elements.queueList.appendChild(queueItem);
+  });
 }
 
 function renderBoard() {
@@ -146,6 +161,7 @@ function callNextNumber() {
   calledNumbers.push(nextNumber);
   updateRemaining();
   updateHistory();
+  updateQueue();
   updateBoardState(nextNumber);
   updateStatus(`Last called: ${getLetterForNumber(nextNumber)}${nextNumber}`);
   playSound("call");
