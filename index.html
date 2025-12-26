@@ -111,6 +111,155 @@
   <!-- Status Message -->
   <div class="status" id="statusMessage" role="status" aria-live="polite"></div>
 
+  <!-- Story Modal (Easter Egg - click logo to reveal) -->
+  <div class="story-modal" id="storyModal" aria-hidden="true">
+    <div class="story-modal__overlay"></div>
+    <div class="story-modal__container">
+      <button class="story-modal__close" id="storyClose" aria-label="Close story">&times;</button>
+      
+      <div class="story-modal__content">
+        <!-- Header -->
+        <header class="story-header">
+          <h1 class="story-header__title">Pop's Bingo — A Family Story</h1>
+          <p class="story-header__subtitle">A love letter to family, tradition, and a voice that will always call the next number</p>
+        </header>
+
+        <!-- Section: Where Bingo Really Began -->
+        <section class="story-section">
+          <h2 class="story-section__title">Where Bingo Really Began</h2>
+          <div class="story-section__content">
+            <div class="story-photo story-photo--portrait">
+              <img src="photos/nana-mae.jpg" alt="Nana Mae" onerror="this.parentElement.classList.add('story-photo--missing')" />
+              <span class="story-photo__placeholder">📷 Add nana-mae.jpg</span>
+            </div>
+            <div class="story-text">
+              <p>Before there was code, before there were sound cards and luggable computers, there was <strong>Nana Mae</strong>.</p>
+              <p>Nana Mae <em>loved</em> Bingo. Not casually — she lived for it. Bingo was joy, anticipation, community, and ritual all rolled into one.</p>
+              <p>When my wife <strong>Cathie</strong> and I would visit Nana in Orlando, one of the highlights was taking her to a local bingo hall near her home. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.</p>
+              <p>That joy planted a seed.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: A Problem-Solver at Heart -->
+        <section class="story-section">
+          <h2 class="story-section__title">A Problem-Solver at Heart</h2>
+          <div class="story-section__content">
+            <div class="story-photo story-photo--portrait">
+              <img src="photos/pop-portrait.jpg" alt="Pop" onerror="this.parentElement.classList.add('story-photo--missing')" />
+              <span class="story-photo__placeholder">📷 Add pop-portrait.jpg</span>
+            </div>
+            <div class="story-text">
+              <p>My dad, <strong>Nick DeMarco</strong>, was a successful business owner who worked relentlessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.</p>
+              <p>In the mid‑1980s, he decided to pursue a lifelong dream: <strong>learning to fly</strong>.</p>
+              <p>Through his friend <strong>Frank</strong>, who worked at Grumman, my dad joined a private pilot club called <strong>GACE</strong>. The club operated a small fleet of aircraft, including Cessna 152s and 172s, and like many clubs at the time, scheduling was painfully manual.</p>
+              <p>If you wanted to reserve a plane, you had to physically drive out to the airport, check a paper schedule, and hope something was available.</p>
+              <p>My dad immediately saw the problem. And, as he always did, he decided to fix it.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: QTS -->
+        <section class="story-section">
+          <h2 class="story-section__title">QTS: Technology Ahead of Its Time</h2>
+          <div class="story-section__content">
+            <div class="story-text story-text--full">
+              <p>This was the mid‑1980s. Personal computers were primitive. There was no internet. No mobile phones. No cloud.</p>
+              <p>But my dad discovered a piece of ISA hardware called <strong>Big Mouth</strong>, a voice playback board. Using it, along with MS‑DOS and his own programming skills, he built something remarkable: a <strong>telephone‑based aircraft scheduling system</strong>.</p>
+              <p>Members of the GACE club could call in by phone, listen to spoken prompts, and reserve aircraft without ever driving to the airport.</p>
+              <p>He called it the <strong>QTS Scheduling System</strong>.</p>
+              <p>The system was deployed at GACE, and members loved it. So much so that my dad went on to sell copies of QTS to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was.</p>
+              <p><em>This was interactive voice technology, built by hand, years before it was commonplace.</em></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: From Airplanes to Bingo -->
+        <section class="story-section">
+          <h2 class="story-section__title">From Airplanes to Bingo</h2>
+          <div class="story-section__content story-section__content--reverse">
+            <div class="story-photo">
+              <img src="pops_bingo_brief/halikan_luggable.jpeg" alt="The original Halikan luggable PC" />
+            </div>
+            <div class="story-text">
+              <p>Every Christmas, our family had a tradition. We played Bingo.</p>
+              <p>Mom would go out and buy a collection of small, thoughtful, fun prizes. The whole family — kids, grandkids, everyone — would gather together. It wasn't about the prizes. It was about laughter, excitement, and being together.</p>
+              <p>And my dad had an idea.</p>
+              <p>If he could build a telephone scheduling system using his own recorded voice… <strong>why not build a Bingo caller?</strong></p>
+              <p>So he did.</p>
+              <p>Using the same core ideas behind QTS, my dad built a <strong>Bingo Calling Application</strong>. He recorded his own voice calling <em>every single Bingo number</em>. Each call was stored individually, mapped perfectly, and played back by the computer.</p>
+              <p>When Bingo started, it wasn't a generic voice. It was <strong>Pop</strong>. Calling every number.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: A Voice That Never Got Old -->
+        <section class="story-section">
+          <h2 class="story-section__title">A Voice That Never Got Old</h2>
+          <div class="story-section__content">
+            <div class="story-text story-text--full">
+              <p>The grandkids loved it.</p>
+              <p>They couldn't get enough of hearing Pop's voice calling the numbers. Even after he passed, that voice — warm, familiar, unmistakably his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.</p>
+              <p>Bingo became more than a game.</p>
+              <p>It became a way for the family to come together.<br/>
+              A way to remember.<br/>
+              A way for Pop to still be there with us.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Photo Gallery -->
+        <section class="story-section">
+          <h2 class="story-section__title">Photo Gallery</h2>
+          <div class="story-gallery">
+            <figure class="story-gallery__item">
+              <img src="pops_bingo_brief/bingo_dir_listing.jpeg" alt="DOS directory listing showing all 83 bingo files" />
+              <figcaption>The original C:\BINGO directory — 83 files, including Pop's 75 voice recordings</figcaption>
+            </figure>
+            <figure class="story-gallery__item story-gallery__item--placeholder">
+              <div class="story-gallery__placeholder">
+                <span>📷</span>
+                <span>Add family-bingo-1.jpg</span>
+              </div>
+              <figcaption>Family playing Bingo</figcaption>
+            </figure>
+            <figure class="story-gallery__item story-gallery__item--placeholder">
+              <div class="story-gallery__placeholder">
+                <span>📷</span>
+                <span>Add family-bingo-2.jpg</span>
+              </div>
+              <figcaption>Another cherished memory</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- Section: Why This Project Exists -->
+        <section class="story-section">
+          <h2 class="story-section__title">Why This Project Exists</h2>
+          <div class="story-section__content">
+            <div class="story-text story-text--full">
+              <p>This app exists to <strong>preserve that legacy</strong>.</p>
+              <p>Not just the code. Not just the audio files. But the spirit of a man who:</p>
+              <ul class="story-list">
+                <li>Solved problems when tools were limited</li>
+                <li>Built technology to bring people together</li>
+                <li>Understood that the most important thing technology can do is <strong>create joy and connection</strong></li>
+              </ul>
+              <p><strong>Pop's Bingo</strong> is a love letter to family, tradition, and a voice that will always call the next number.</p>
+              <p class="story-dedication"><em>With love, for Nana Mae, for Pop, and for the generations who gather around the table every Christmas.</em></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="story-footer">
+          <p>Click anywhere outside this window to close</p>
+          <p class="story-footer__hint">🎄 Merry Christmas from the DeMarco family 🎄</p>
+        </footer>
+      </div>
+    </div>
+  </div>
+
   <audio id="bingoSound" preload="auto"></audio>
   <script src="scripts/main.js"></script>
 </body>

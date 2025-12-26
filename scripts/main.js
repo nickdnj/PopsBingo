@@ -45,6 +45,11 @@ const elements = {
   
   // Status
   statusMessage: document.getElementById('statusMessage'),
+  
+  // Story Modal (Easter Egg)
+  logo: document.querySelector('.logo'),
+  storyModal: document.getElementById('storyModal'),
+  storyClose: document.getElementById('storyClose'),
 };
 
 // Game state
@@ -458,13 +463,61 @@ function resetSession() {
 }
 
 
+// ========================================
+// Story Modal (Easter Egg)
+// ========================================
+
+function openStoryModal() {
+  elements.storyModal.classList.add('story-modal--open');
+  elements.storyModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeStoryModal() {
+  elements.storyModal.classList.remove('story-modal--open');
+  elements.storyModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+function isStoryModalOpen() {
+  return elements.storyModal.classList.contains('story-modal--open');
+}
+
 // Wire up event listeners
 function wireEvents() {
   elements.callBtn.addEventListener('click', callNextNumber);
   elements.resetBtn.addEventListener('click', resetSession);
   
+  // Story modal (Easter egg) - click logo to open
+  if (elements.logo && elements.storyModal) {
+    elements.logo.addEventListener('click', (e) => {
+      e.preventDefault();
+      openStoryModal();
+    });
+    
+    // Close button
+    elements.storyClose.addEventListener('click', closeStoryModal);
+    
+    // Click overlay to close
+    elements.storyModal.querySelector('.story-modal__overlay').addEventListener('click', closeStoryModal);
+    
+    // Prevent clicks inside the container from closing
+    elements.storyModal.querySelector('.story-modal__container').addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+  
   // Keyboard shortcuts
   document.addEventListener('keydown', (e) => {
+    // Close story modal on Escape
+    if (e.code === 'Escape' && isStoryModalOpen()) {
+      closeStoryModal();
+      return;
+    }
+    
+    // Don't process game shortcuts if modal is open
+    if (isStoryModalOpen()) return;
+    
     if (e.code === 'Space' && !e.repeat) {
       e.preventDefault();
       callNextNumber();

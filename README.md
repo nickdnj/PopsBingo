@@ -1,10 +1,66 @@
-# 🎄 Pop's Christmas Bingo
+# 🎄 Pop's Bingo — A Family Story
 
-**A 30+ year family tradition, preserved in code.**
+## Where Bingo Really Began
 
-Every Christmas since the late 1980s, our family has gathered around a glowing screen to play Bingo. Not with store-bought cards and a plastic tumbler—but with custom software built by Pop, calling out numbers in his own recorded voice.
+Before there was code, before there were sound cards and luggable computers, there was **Nana Mae**.
 
-This is that program, reborn for the modern web.
+Nana Mae *loved* Bingo. Not casually — she lived for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit Nana in Orlando, one of the highlights was taking her to a local bingo hall near her home. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
+
+That joy planted a seed.
+
+---
+
+## A Problem-Solver at Heart
+
+My dad, **Nick DeMarco**, was a successful business owner who worked relentlessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.
+
+In the mid‑1980s, he decided to pursue a lifelong dream: learning to fly.
+
+Through his friend **Frank**, who worked at Grumman, my dad joined a private pilot club called **GACE**. The club operated a small fleet of aircraft, including **Cessna 152s and 172s**, and like many clubs at the time, scheduling was painfully manual. If you wanted to reserve a plane, you had to physically drive out to the airport, check a paper schedule, and hope something was available.
+
+My dad immediately saw the problem.
+
+And, as he always did, he decided to fix it.
+
+---
+
+## QTS: Technology Ahead of Its Time
+
+This was the mid‑1980s. Personal computers were primitive. There was no internet. No mobile phones. No cloud.
+
+But my dad discovered a piece of ISA hardware called **Big Mouth**, a voice playback board. Using it, along with MS‑DOS and his own programming skills, he built something remarkable: a **telephone‑based aircraft scheduling system**.
+
+Members of the GACE club could call in by phone, listen to spoken prompts, and reserve aircraft without ever driving to the airport.
+
+He called it the **QTS Scheduling System**.
+
+The system was deployed at GACE, and members loved it. So much so that my dad went on to sell copies of QTS to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was.
+
+This was interactive voice technology, built by hand, years before it was commonplace.
+
+---
+
+## From Airplanes to Bingo
+
+Every Christmas, our family had a tradition.
+
+We played Bingo.
+
+Mom would go out and buy a collection of small, thoughtful, fun prizes. The whole family — kids, grandkids, everyone — would gather together. It wasn't about the prizes. It was about laughter, excitement, and being together.
+
+And my dad had an idea.
+
+If he could build a telephone scheduling system using his own recorded voice… why not build a Bingo caller?
+
+So he did.
+
+Using the same core ideas behind QTS, my dad built a **Bingo Calling Application**. He recorded his own voice calling *every single Bingo number*. Each call was stored individually, mapped perfectly, and played back by the computer.
+
+When Bingo started, it wasn't a generic voice.
+
+It was **Pop**.
+
+Calling every number.
 
 ---
 
@@ -14,56 +70,39 @@ This is that program, reborn for the modern web.
 
 *The Halikan "luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
 
----
-
-## The Man Behind the Code
-
-**Nick DeMarco** wasn't a professional software engineer. He never took a programming class. He was a self-taught tinkerer—the kind of person who looked at a problem and thought, *"I can build that."*
-
-In the late 1980s, when most families didn't even have a computer in their home, Pop sat down at this Halikan luggable running **MS-DOS 5** and wrote `BINGO.EXE`. He didn't just write the game logic—he recorded his own voice for every single bingo call.
-
-**75 audio files.** B-1 through O-75. Each one captured in raw PCM format and saved to the hard drive with names like `B12`, `N31`, `O68`—no file extensions, just pure data.
-
----
-
-## The Files
-
 ![DOS Directory Listing](pops_bingo_brief/bingo_dir_listing.jpeg)
 
 *The `C:\BINGO` directory listing from the original machine. 83 files totaling just 632KB—including BINGO.EXE, BINGOCARD.EXE, and all 75 of Pop's voice recordings.*
 
-Look at that directory listing. Each of those cryptic filenames—`B1`, `I16`, `N31`, `G46`, `O61`—is Pop's voice, frozen in time. When you called a number, the ISA "Big Mouth" sound card would stream that raw audio data and Pop would announce: *"B... twelve!"*
+---
+
+## A Voice That Never Got Old
+
+The grandkids loved it.
+
+They couldn't get enough of hearing Pop's voice calling the numbers. Even after he passed, that voice — warm, familiar, unmistakably his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.
+
+Bingo became more than a game.
+
+It became a way for the family to come together.
+A way to remember.
+A way for Pop to still be there with us.
 
 ---
 
-## The Christmas Tradition
+## Why This Project Exists
 
-For over **30 years**, this program has been the heartbeat of our family's Christmas gatherings.
+This repository exists to **preserve that legacy**.
 
-The ritual never changed:
-1. Boot up the Halikan
-2. Run `BINGO.BAT`
-3. Print out cards on the dot-matrix printer
-4. Crowd around the screen—kids, cousins, aunts, uncles, grandkids
-5. Listen for Pop's voice calling the numbers
-6. **"BINGO!"**—followed by cheers, groans, and accusations of cheating
+Not just the code.
+Not just the audio files.
+But the spirit of a man who:
 
-The laughter. The rivalries. The kids fighting over who gets to click the button. That's what this code really is—not algorithms and audio files, but three decades of family memories.
+* solved problems when tools were limited,
+* built technology to bring people together,
+* and understood that the most important thing technology can do is **create joy and connection**.
 
----
-
-## The Preservation Project
-
-The Halikan still works. Thirty-five years later, it still boots, still runs BINGO.EXE, still plays Pop's voice.
-
-But hardware doesn't last forever. So we're preserving it:
-
-1. **Extract** Pop's original voice files from the IDE hard drive
-2. **Convert** the raw PCM audio to modern `.wav` format
-3. **Rebuild** the game as a web app that runs anywhere
-4. **Keep his voice alive** in every call
-
-This repository is that effort. The Christmas 2024 version features a festive new look with falling snow, glowing ornament-style numbers, and—most importantly—the same voice that's been calling Bingo for three decades.
+**Pop's Bingo** is a love letter to family, tradition, and a voice that will always call the next number.
 
 ---
 
@@ -73,7 +112,7 @@ No installation required. Just open in a browser:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/PopsBingo.git
+git clone https://github.com/nickdnj/PopsBingo.git
 cd PopsBingo
 
 # Start a local server (for audio to work properly)
@@ -89,6 +128,9 @@ Or simply open `index.html` directly in any modern browser.
 - **Call Number** (or press `Space`) — Call the next random number
 - **New Game** — Reset and start fresh
 - Voice files auto-load from the `audio/` folder
+
+### Easter Egg
+Click on the **Pop's Christmas Bingo** logo to read the full family story. 🎄
 
 ---
 
@@ -135,36 +177,4 @@ sox -r 11025 -c 1 -b 8 -e unsigned-integer B12 B12.wav
 
 ---
 
-## The Legacy
-
-This isn't just code. It's a family artifact.
-
-Pop showed us that you don't need a computer science degree to build something meaningful. You don't need permission. You just need curiosity, stubbornness, and the desire to make something your family will love.
-
-Every time this app calls a number, it carries forward that spirit. A self-taught engineer's gift to his family, echoing through the decades.
-
----
-
-## For Other Families
-
-If you grew up with a parent who tinkered—who built things, fixed things, figured things out—this project is for you too.
-
-Fork it. Customize it. Record your own voice. Start your own tradition.
-
-The best software isn't always the most sophisticated. Sometimes it's the program that makes your family laugh together every Christmas for thirty years.
-
----
-
-## Gratitude
-
-To Pop, who taught us that making something yourself is always better than buying it.
-
-To the family members who kept the Halikan running all these years.
-
-And to everyone who understands that the best code is written with love.
-
-**Merry Christmas.** 🎄
-
----
-
-*Built with curiosity, preserved with love.*
+*With love, for Nana Mae, for Pop, and for the generations who gather around the table every Christmas.* 🎄
