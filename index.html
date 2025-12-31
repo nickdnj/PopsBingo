@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles/main.css?v=8" />
+  <link rel="stylesheet" href="styles/main.css?v=9" />
 </head>
 <body>
   <!-- Snowfall effect -->
@@ -153,9 +153,10 @@
         <section class="story-section">
           <h2 class="story-section__title">Nana Mae — Where It All Began</h2>
           <div class="story-section__content">
-            <div class="story-photo story-photo--portrait">
+            <div class="story-photo story-photo--portrait story-photo--clickable" data-full="photos/nana-mae.jpg">
               <img src="photos/nana-mae.jpg" alt="Nana Mae" onerror="this.parentElement.classList.add('story-photo--missing')" />
               <span class="story-photo__placeholder">📷 Add nana-mae.jpg</span>
+              <span class="story-photo__zoom">🔍</span>
             </div>
             <div class="story-text">
               <p>Before there was code, before there were sound cards and luggable computers, there was <strong>Nana</strong>.</p>
@@ -172,15 +173,16 @@
         <section class="story-section">
           <h2 class="story-section__title">Mom Marge — The Director Behind the Scenes</h2>
           <div class="story-section__content">
-            <div class="story-photo story-photo--portrait">
-              <img src="photos/family-bingo-1.jpg" alt="Family Playing Bingo" onerror="this.parentElement.classList.add('story-photo--missing')" />
-              <span class="story-photo__placeholder">📷 Add family photo</span>
+            <div class="story-photo story-photo--portrait story-photo--clickable" data-full="photos/mom.jpg">
+              <img src="photos/mom.jpg" alt="Mom Marge with grandchildren" onerror="this.parentElement.classList.add('story-photo--missing')" />
+              <span class="story-photo__placeholder">📷 Add mom.jpg</span>
+              <span class="story-photo__zoom">🔍</span>
             </div>
             <div class="story-text">
-              <p>None of this would have happened without <strong>Mom</strong>.</p>
-              <p>My mother, <strong>Marge</strong>, was the director behind the scenes. She was the one who made everything happen. Every Christmas, she'd go out and buy a collection of small, thoughtful, fun prizes. She'd set the table, organize the games, gather the family together.</p>
-              <p>Pop built the technology. But Mom built the moment.</p>
-              <p>She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.</p>
+              <p>None of this would happen without <strong>Mom</strong>.</p>
+              <p>My mother, <strong>Marge</strong>, is the director behind the scenes. At 86 years young, she's still going strong! Every Christmas, she goes out and buys a collection of small, thoughtful, fun prizes. She sets the table, organizes the games, gathers the family together.</p>
+              <p>Pop built the technology. But Mom builds the moment.</p>
+              <p>She is the unsung hero of every Christmas gathering. The one who turns chaos into tradition. The one who makes sure everyone feels welcome, fed, and loved. Without her, the Bingo games — and so much else — would never come together.</p>
             </div>
           </div>
         </section>
@@ -189,9 +191,10 @@
         <section class="story-section">
           <h2 class="story-section__title">Growing Up with Pop's Voice</h2>
           <div class="story-section__content">
-            <div class="story-photo story-photo--portrait">
+            <div class="story-photo story-photo--portrait story-photo--clickable" data-full="photos/pop-portrait.jpg">
               <img src="photos/pop-portrait.jpg" alt="Pop" onerror="this.parentElement.classList.add('story-photo--missing')" />
               <span class="story-photo__placeholder">📷 Add pop-portrait.jpg</span>
+              <span class="story-photo__zoom">🔍</span>
             </div>
             <div class="story-text">
               <p>My dad, <strong>Nick DeMarco</strong>, was a successful business owner who worked relentlessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.</p>
@@ -234,8 +237,9 @@
         <section class="story-section">
           <h2 class="story-section__title">From Airplanes to Bingo</h2>
           <div class="story-section__content story-section__content--reverse">
-            <div class="story-photo">
+            <div class="story-photo story-photo--clickable" data-full="pops_bingo_brief/halikan_luggable.jpeg">
               <img src="pops_bingo_brief/halikan_luggable.jpeg" alt="The original Halikan luggable PC" />
+              <span class="story-photo__zoom">🔍</span>
             </div>
             <div class="story-text">
               <p>Every Christmas, the family gathered. Mom bought the prizes. The table was set. And then came the question:</p>
@@ -266,13 +270,30 @@
         <section class="story-section">
           <h2 class="story-section__title">Photo Gallery</h2>
           <div class="story-gallery">
-            <figure class="story-gallery__item">
+            <figure class="story-gallery__item story-photo--clickable" data-full="photos/2001_pop.JPG">
+              <img src="photos/2001_pop.JPG" alt="Christmas Bingo 2001 - Pop calling numbers with the family" />
+              <figcaption>Christmas Bingo circa 2001 — Pop calling numbers with the family gathered around</figcaption>
+              <span class="story-photo__zoom">🔍</span>
+            </figure>
+            <figure class="story-gallery__item story-photo--clickable" data-full="photos/family-bingo-1.jpg">
+              <img src="photos/family-bingo-1.jpg" alt="Family playing Bingo" />
+              <figcaption>The family gathered around the table, Bingo cards ready</figcaption>
+              <span class="story-photo__zoom">🔍</span>
+            </figure>
+            <figure class="story-gallery__item story-photo--clickable" data-full="photos/2019_pop.png">
+              <img src="photos/2019_pop.png" alt="Pop in 2019" />
+              <figcaption>Pop in his later years — still the heart of the family</figcaption>
+              <span class="story-photo__zoom">🔍</span>
+            </figure>
+            <figure class="story-gallery__item story-photo--clickable" data-full="pops_bingo_brief/bingo_dir_listing.jpeg">
               <img src="pops_bingo_brief/bingo_dir_listing.jpeg" alt="DOS directory listing showing all 83 bingo files" />
               <figcaption>The original C:\BINGO directory — 83 files, including Pop's 75 voice recordings</figcaption>
+              <span class="story-photo__zoom">🔍</span>
             </figure>
-            <figure class="story-gallery__item">
+            <figure class="story-gallery__item story-photo--clickable" data-full="pops_bingo_brief/halikan_luggable.jpeg">
               <img src="pops_bingo_brief/halikan_luggable.jpeg" alt="The Halikan Luggable PC" />
               <figcaption>The Halikan "luggable" that ran Pop's Bingo for over three decades</figcaption>
+              <span class="story-photo__zoom">🔍</span>
             </figure>
           </div>
         </section>
@@ -302,6 +323,16 @@
           <p class="story-footer__hint">🎄 Merry Christmas from the DeMarco family 🎄</p>
         </footer>
       </div>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox__overlay"></div>
+    <div class="lightbox__container">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close image">&times;</button>
+      <img class="lightbox__image" id="lightboxImage" src="" alt="" />
+      <div class="lightbox__caption" id="lightboxCaption"></div>
     </div>
   </div>
 

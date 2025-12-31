@@ -38,13 +38,13 @@ That love planted a seed.
 
 ## ❄️ Mom Marge — The Director Behind the Scenes
 
-None of this would have happened without **Mom**.
+None of this would happen without **Mom**.
 
-![Family Playing Bingo](photos/family-bingo-1.jpg)
+![Mom Marge with grandchildren](photos/mom.jpg)
 
-My mother, **Marge**, was the director behind the scenes. She was the one who made everything happen. Every Christmas, she'd go out and buy a collection of small, thoughtful, fun prizes. She'd set the table, organize the games, gather the family together.
+My mother, **Marge**, is the director behind the scenes. At 86 years young, she's still going strong! Every Christmas, she goes out and buys a collection of small, thoughtful, fun prizes. She sets the table, organizes the games, gathers the family together.
 
-Pop built the technology. But Mom built the moment.
+Pop built the technology. But Mom builds the moment.
 
 She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.
 

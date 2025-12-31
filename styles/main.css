@@ -1415,3 +1415,142 @@ body {
 .logo:active {
   transform: scale(0.98);
 }
+
+/* ========================================
+   Clickable Photos
+   ======================================== */
+.story-photo--clickable {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.story-photo--clickable:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+.story-photo__zoom {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.story-photo--clickable:hover .story-photo__zoom {
+  opacity: 1;
+}
+
+.story-gallery__item.story-photo--clickable {
+  cursor: pointer;
+}
+
+.story-gallery__item .story-photo__zoom {
+  bottom: auto;
+  top: 8px;
+}
+
+/* ========================================
+   Photo Lightbox
+   ======================================== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  cursor: pointer;
+}
+
+.lightbox__container {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lightboxZoom 0.3s ease;
+}
+
+@keyframes lightboxZoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox__close {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background: var(--candy-red);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 10;
+}
+
+.lightbox__close:hover {
+  transform: scale(1.1);
+  background: #ff1744;
+}
+
+.lightbox__image {
+  max-width: 90vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__caption {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: center;
+  max-width: 600px;
+}

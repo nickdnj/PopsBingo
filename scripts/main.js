@@ -509,6 +509,12 @@ function wireEvents() {
   
   // Keyboard shortcuts
   document.addEventListener('keydown', (e) => {
+    // Close lightbox on Escape first
+    if (e.code === 'Escape' && isLightboxOpen()) {
+      closeLightbox();
+      return;
+    }
+    
     // Close story modal on Escape
     if (e.code === 'Escape' && isStoryModalOpen()) {
       closeStoryModal();
@@ -526,6 +532,65 @@ function wireEvents() {
       e.preventDefault();
       resetSession();
     }
+  });
+  
+  // Set up lightbox
+  setupLightbox();
+}
+
+// ========================================
+// Photo Lightbox
+// ========================================
+const lightboxElements = {
+  lightbox: document.getElementById('lightbox'),
+  image: document.getElementById('lightboxImage'),
+  caption: document.getElementById('lightboxCaption'),
+  close: document.getElementById('lightboxClose'),
+};
+
+function isLightboxOpen() {
+  return lightboxElements.lightbox?.classList.contains('lightbox--open');
+}
+
+function openLightbox(imageSrc, altText) {
+  if (!lightboxElements.lightbox) return;
+  
+  lightboxElements.image.src = imageSrc;
+  lightboxElements.image.alt = altText || '';
+  lightboxElements.caption.textContent = altText || '';
+  
+  lightboxElements.lightbox.classList.add('lightbox--open');
+  lightboxElements.lightbox.setAttribute('aria-hidden', 'false');
+}
+
+function closeLightbox() {
+  if (!lightboxElements.lightbox) return;
+  
+  lightboxElements.lightbox.classList.remove('lightbox--open');
+  lightboxElements.lightbox.setAttribute('aria-hidden', 'true');
+  lightboxElements.image.src = '';
+}
+
+function setupLightbox() {
+  if (!lightboxElements.lightbox) return;
+  
+  // Close button
+  lightboxElements.close?.addEventListener('click', closeLightbox);
+  
+  // Click overlay to close
+  lightboxElements.lightbox.querySelector('.lightbox__overlay')?.addEventListener('click', closeLightbox);
+  
+  // Set up clickable photos
+  document.querySelectorAll('.story-photo--clickable').forEach((photo) => {
+    photo.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const fullSrc = photo.dataset.full;
+      const img = photo.querySelector('img');
+      const caption = photo.querySelector('figcaption')?.textContent || img?.alt || '';
+      if (fullSrc) {
+        openLightbox(fullSrc, caption);
+      }
+    });
   });
 }
 
