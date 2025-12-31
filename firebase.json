@@ -7,7 +7,7 @@
       ".git",
       ".gitignore",
       "README.md",
-      "pops_bingo_brief/**",
+      "pops_bingo_brief/*.md",
       "*.zip",
       "*.sh"
     ],
