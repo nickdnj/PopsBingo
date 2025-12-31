@@ -10,7 +10,7 @@ My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an It
 
 Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. There was always chicken or lasagna for family that didn't like fish. It was never about perfection. It was about being together.
 
-**Nana Mae** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Antie** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
+**Nana** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Antie** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
 
 And every Christmas Eve, after the food was cleared and the table was set fresh, we played **Bingo**.
 
@@ -18,13 +18,15 @@ And every Christmas Eve, after the food was cleared and the table was set fresh,
 
 ## ❄️ Nana Mae — Where It All Began
 
-Before there was code, before there were sound cards and luggable computers, there was **Nana Mae**.
+Before there was code, before there were sound cards and luggable computers, there was **Nana**.
 
 ![Nana Mae](photos/nana-mae.jpg)
 
+She was my Nana — my mother's mother. Years later, when the great-grandkids came along and my mom became "Nana" to them, we started calling her **Nana Mae** to tell them apart. But to me, she was always just Nana.
+
 Nana was Irish and proud of it. She loved her heritage fiercely. But nothing — *nothing* — compared to how much she loved Bingo.
 
-Nana Mae didn't just enjoy Bingo. She *lived* for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit Nana in Orlando, one of the highlights was taking her to a local bingo hall. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
+Nana didn't just enjoy Bingo. She *lived* for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit her in Orlando, one of the highlights was taking her to a local bingo hall. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
 
 She also taught me how to argue. How to debate. How to hold my ground. I think of her often, and I miss her deeply. She passed around 1996, but her spirit lives on in every game we play.
 
