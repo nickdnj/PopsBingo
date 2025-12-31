@@ -143,7 +143,8 @@ body {
    ======================================== */
 .app {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  /* Sidebar scales with viewport: min 180px, preferred 18vw, max 260px */
+  grid-template-columns: clamp(180px, 18vw, 260px) 1fr;
   height: 100vh;
   overflow: hidden;
 }
@@ -153,10 +154,11 @@ body {
    ======================================== */
 .sidebar {
   background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--sidebar-accent) 100%);
-  padding: 20px 16px;
+  /* Padding scales with viewport */
+  padding: clamp(12px, 2vh, 20px) clamp(10px, 1.5vw, 16px);
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: clamp(8px, 1.5vh, 14px);
   overflow-y: auto;
   position: relative;
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
@@ -169,25 +171,25 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding: 6px;
+  padding: clamp(4px, 0.5vh, 6px);
   background: rgba(0, 0, 0, 0.2);
-  font-size: 10px;
+  font-size: clamp(8px, 0.9vw, 10px);
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 16px;
-  padding-bottom: 16px;
+  gap: clamp(8px, 1vw, 14px);
+  margin-top: clamp(10px, 1.5vh, 16px);
+  padding-bottom: clamp(10px, 1.5vh, 16px);
   border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
 }
 
 .logo__icon {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 56px);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   animation: gentle-bounce 2s ease-in-out infinite;
 }
@@ -205,18 +207,18 @@ body {
 
 .logo__title {
   font-family: var(--font-display);
-  font-size: 36px;
+  font-size: clamp(22px, 4vw, 42px);
   font-weight: 700;
   line-height: 1;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   color: var(--gold);
 }
 
 .logo__subtitle {
-  font-size: 14px;
+  font-size: clamp(10px, 1.5vw, 16px);
   font-weight: 600;
   opacity: 0.95;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
@@ -224,35 +226,35 @@ body {
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: clamp(4px, 0.8vw, 8px);
 }
 
 .stat-box {
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: var(--radius-md);
-  padding: 10px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: clamp(6px, 1vh, 10px) clamp(4px, 0.5vw, 6px);
   text-align: center;
   backdrop-filter: blur(4px);
 }
 
 .stat-box__value {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 32px);
   font-weight: 700;
   color: var(--gold);
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
-  min-height: 30px;
+  min-height: clamp(24px, 4vh, 36px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .stat-box__label {
-  font-size: 10px;
+  font-size: clamp(9px, 1.2vw, 13px);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
   opacity: 0.8;
   margin-top: 2px;
 }
@@ -325,28 +327,28 @@ body {
 .actions {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(6px, 1vh, 10px);
 }
 
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 16px;
+  gap: clamp(6px, 0.8vw, 10px);
+  padding: clamp(10px, 1.5vh, 16px) clamp(12px, 1.5vw, 20px);
   border: none;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 18px);
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .btn__icon {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 .btn--primary {
@@ -383,23 +385,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 12px 16px;
+  gap: clamp(8px, 1vw, 12px);
+  padding: clamp(10px, 1.2vh, 14px) clamp(12px, 1.5vw, 18px);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-md);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
 .voice-status__icon {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 .voice-status__text {
-  font-size: 12px;
+  font-size: clamp(11px, 1.3vw, 15px);
   font-weight: 600;
   color: var(--text-muted);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .voice-status--loaded {
@@ -460,15 +462,15 @@ body {
 /* Remaining Count */
 .remaining {
   text-align: center;
-  padding: 10px;
+  padding: clamp(8px, 1.2vh, 14px);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   margin-top: auto;
 }
 
 .remaining__count {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: clamp(22px, 3.5vw, 40px);
   font-weight: 700;
   color: var(--gold);
   text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
@@ -476,7 +478,7 @@ body {
 
 .remaining__label {
   display: block;
-  font-size: 11px;
+  font-size: clamp(10px, 1.2vw, 14px);
   opacity: 0.8;
   margin-top: 2px;
 }
@@ -485,17 +487,17 @@ body {
    QR Code Section
    ======================================== */
 .qr-section {
-  margin-top: 16px;
-  padding: 12px;
+  margin-top: clamp(10px, 1.8vh, 18px);
+  padding: clamp(10px, 1.2vh, 14px);
   background: rgba(0, 0, 0, 0.25);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   text-align: center;
-  border: 2px dashed rgba(255, 215, 0, 0.4);
+  border: 1px dashed rgba(255, 215, 0, 0.4);
 }
 
 .qr-code {
   display: inline-block;
-  padding: 8px;
+  padding: clamp(5px, 0.8vh, 10px);
   background: #0d1f0d;
   border-radius: var(--radius-sm);
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
@@ -503,13 +505,13 @@ body {
 
 .qr-code img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: clamp(70px, 10vw, 110px);
+  height: clamp(70px, 10vw, 110px);
 }
 
 .qr-label {
-  margin-top: 8px;
-  font-size: 13px;
+  margin-top: clamp(6px, 0.8vh, 10px);
+  font-size: clamp(11px, 1.3vw, 15px);
   font-weight: 600;
   color: var(--gold);
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
@@ -521,9 +523,10 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 16px;
-  overflow: auto;
+  gap: clamp(8px, 1vh, 16px);
+  padding: clamp(8px, 1.5vh, 16px);
+  /* CRITICAL: overflow hidden prevents scrollbars - board must fit */
+  overflow: hidden;
   min-height: 0;
 }
 
@@ -532,20 +535,24 @@ body {
    ======================================== */
 .board {
   display: grid;
-  grid-template-columns: clamp(40px, 5vw, 80px) 1fr;
-  gap: 4px;
+  /* B-I-N-G-O column scales with viewport */
+  grid-template-columns: clamp(28px, 4vw, 60px) 1fr;
+  gap: clamp(2px, 0.3vh, 4px);
   background: rgba(0, 0, 0, 0.3);
   border-radius: var(--radius-lg);
-  padding: 12px;
+  padding: clamp(6px, 1vh, 12px);
   box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* Fill available space but don't exceed it */
   flex: 1;
-  min-height: 250px;
+  min-height: 0;
+  /* Ensure board doesn't overflow */
+  overflow: hidden;
 }
 
 .board__letters {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
-  gap: 3px;
+  gap: clamp(2px, 0.3vh, 4px);
 }
 
 .board__letter {
@@ -553,11 +560,12 @@ body {
   align-items: center;
   justify-content: center;
   font-family: var(--font-display);
-  font-size: clamp(24px, min(4vw, 8vh), 64px);
+  /* Font scales with board height: 5 rows, so use ~13vh max (65vh/5) */
+  font-size: clamp(14px, min(3vw, 10vh), 48px);
   font-weight: 800;
   color: white;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
 
 .board__letter--b { background: var(--ball-b); }
@@ -570,7 +578,7 @@ body {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  gap: 4px;
+  gap: clamp(2px, 0.3vh, 4px);
 }
 
 .board__cell {
@@ -578,13 +586,18 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.08);
-  border-radius: 6px;
-  /* Dynamic font sizing: scales with viewport for TV viewing from back of room */
-  font-size: clamp(18px, min(4.5vw, 10vh), 80px);
+  border-radius: 4px;
+  /* Dynamic font sizing: scales with viewport 
+     - Board has 5 rows in ~65vh of space, so each row ~13vh
+     - Font should be ~70% of cell height for readability
+     - Uses min() to pick smaller of width or height constraint */
+  font-size: clamp(12px, min(3.5vw, 9vh), 60px);
   font-weight: 800;
   color: rgba(255, 255, 255, 0.6);
-  transition: all 0.2s ease;
+  transition: all 0.15s ease;
   cursor: default;
+  /* Ensure text doesn't overflow cell */
+  overflow: hidden;
 }
 
 .board__cell--called {
@@ -629,13 +642,15 @@ body {
    ======================================== */
 .history {
   background: rgba(0, 0, 0, 0.2);
-  border-radius: var(--radius-lg);
-  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  padding: clamp(10px, 1.2vh, 16px) clamp(12px, 2vw, 20px);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: clamp(12px, 2.5vw, 24px);
   flex-shrink: 0;
-  min-height: 100px;
+  /* Scales with viewport to match calling field visual weight */
+  min-height: clamp(80px, 14vh, 120px);
+  max-height: clamp(90px, 16vh, 140px);
 }
 
 .history__title {
@@ -648,12 +663,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: clamp(2px, 0.5vh, 6px);
 }
 
 .history__current-ball {
-  width: 80px;
-  height: 80px;
+  /* Ball scales with viewport to match board visual weight */
+  width: clamp(60px, 11vh, 100px);
+  height: clamp(60px, 11vh, 100px);
   background: radial-gradient(circle at 30% 30%, #ffffff, #e8e8e8 60%, #c0c0c0);
   border-radius: 50%;
   display: flex;
@@ -675,9 +691,9 @@ body {
 .history__current-ball::before {
   content: "";
   position: absolute;
-  width: 60px;
-  height: 60px;
-  border: 3px solid var(--candy-red);
+  width: 75%;
+  height: 75%;
+  border: clamp(2px, 0.3vh, 3px) solid var(--candy-red);
   border-radius: 50%;
 }
 
@@ -701,7 +717,7 @@ body {
 .history__current-letter {
   display: block;
   font-family: var(--font-display);
-  font-size: 22px;
+  font-size: clamp(16px, 3vh, 28px);
   font-weight: 700;
   color: var(--candy-red);
   line-height: 1;
@@ -710,17 +726,17 @@ body {
 .history__current-number {
   display: block;
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: clamp(20px, 4vh, 36px);
   font-weight: 700;
   color: #1a1a1a;
   line-height: 1;
 }
 
 .history__current-label {
-  font-size: 10px;
+  font-size: clamp(9px, 1.2vh, 12px);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--text-muted);
 }
 
@@ -731,18 +747,18 @@ body {
 
 .history__list {
   display: flex;
-  gap: 8px;
+  gap: clamp(6px, 1vw, 10px);
   overflow-x: auto;
-  padding: 6px 0;
+  padding: clamp(4px, 0.8vh, 8px) 0;
   flex: 1;
 }
 
 .history__item {
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
+  width: clamp(38px, 7vh, 60px);
+  height: clamp(38px, 7vh, 60px);
   background: rgba(255, 255, 255, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.12);
+  border: clamp(1px, 0.2vh, 2px) solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
@@ -753,12 +769,12 @@ body {
 }
 
 .history__item-letter {
-  font-size: 9px;
+  font-size: clamp(9px, 1.4vh, 13px);
   color: var(--gold);
 }
 
 .history__item-number {
-  font-size: 14px;
+  font-size: clamp(12px, 2vh, 18px);
   color: white;
   line-height: 1;
 }
@@ -852,30 +868,8 @@ body {
    ======================================== */
 @media (max-width: 1024px) {
   .app {
-    grid-template-columns: 240px 1fr;
-  }
-  
-  .board__letter {
-    font-size: 24px;
-    min-height: 50px;
-  }
-  
-  .current-call__ball {
-    width: 140px;
-    height: 140px;
-  }
-  
-  .current-call__ball::before {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .current-call__letter {
-    font-size: 36px;
-  }
-  
-  .current-call__number {
-    font-size: 42px;
+    /* Narrower sidebar on medium screens */
+    grid-template-columns: clamp(160px, 16vw, 220px) 1fr;
   }
 }
 

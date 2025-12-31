@@ -4,45 +4,89 @@
 
 ---
 
-## ❄️ Where Bingo Really Began
+## ❄️ A Long Island Christmas
+
+My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, **Nana Mae**.
+
+Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. My brother's wife hated seafood, so there was always chicken on the table too. It was never about perfection. It was about being together.
+
+**Nana Mae** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Aunt Eileen** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
+
+And every Christmas Eve, after the food was cleared and the table was set fresh, we played **Bingo**.
+
+---
+
+## ❄️ Nana Mae — Where It All Began
 
 Before there was code, before there were sound cards and luggable computers, there was **Nana Mae**.
 
 ![Nana Mae](photos/nana-mae.jpg)
 
-Nana Mae *loved* Bingo. Not casually — she lived for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit Nana in Orlando, one of the highlights was taking her to a local bingo hall near her home. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
+Nana was Irish and proud of it. She loved her heritage fiercely. But nothing — *nothing* — compared to how much she loved Bingo.
 
-That joy planted a seed.
+Nana Mae didn't just enjoy Bingo. She *lived* for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit Nana in Orlando, one of the highlights was taking her to a local bingo hall. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
+
+She also taught me how to argue. How to debate. How to hold my ground. I think of her often, and I miss her deeply. She passed around 1996, but her spirit lives on in every game we play.
+
+Cathie likes Bingo too — but no one loved it like Nana.
+
+That love planted a seed.
 
 ---
 
-## ❄️ A Problem-Solver at Heart
+## ❄️ Mom Marge — The Director Behind the Scenes
+
+None of this would have happened without **Mom**.
+
+![Family Playing Bingo](photos/family-bingo-1.jpg)
+
+My mother, **Marge**, was the director behind the scenes. She was the one who made everything happen. Every Christmas, she'd go out and buy a collection of small, thoughtful, fun prizes. She'd set the table, organize the games, gather the family together.
+
+Pop built the technology. But Mom built the moment.
+
+She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.
+
+---
+
+## ❄️ Growing Up with Pop's Voice
 
 My dad, **Nick DeMarco**, was a successful business owner who worked relentlessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.
 
 ![Pop](photos/pop-portrait.jpg)
 
-In the mid‑1980s, he decided to pursue a lifelong dream: **learning to fly**.
+In the mid-1980s, he decided to pursue a lifelong dream: **learning to fly**.
 
-Through his friend **Frank**, who worked at Grumman, my dad joined a private pilot club called **GACE**. The club operated a small fleet of aircraft, including Cessna 152s and 172s, and like many clubs at the time, scheduling was painfully manual. If you wanted to reserve a plane, you had to physically drive out to the airport, check a paper schedule, and hope something was available.
+Through his friend **Frank**, who worked at Grumman, my dad joined a private pilot club called **GACE**. The club operated a small fleet of Cessna 152s and 172s. Like many clubs at the time, scheduling was painfully manual — you had to drive to the airport, check a paper schedule, and hope a plane was available.
 
-My dad immediately saw the problem.
+My dad saw the problem. And he fixed it.
 
-And, as he always did, he decided to fix it.
+Using a piece of ISA hardware called **Big Mouth** — a voice playback board — along with MS-DOS and his own programming skills, he built a **telephone-based aircraft scheduling system**. Members could call in, listen to spoken prompts, and reserve aircraft without ever leaving home.
+
+He called it the **QTS Scheduling System**.
+
+I grew up hearing him develop it. Over and over, I'd hear his voice echoing through the house:
+
+*"Sierra Foxtrot..."*  
+*"November Three Four Seven..."*  
+*"Cessna One Seven Two..."*
+
+The military phonetic alphabet. Tail numbers. Scheduling prompts. Recorded again and again until they were perfect.
+
+At the time, honestly? It was kind of annoying. Hearing the same phrases repeated endlessly while he got the recordings just right.
+
+But now that he's gone, those memories are precious. That voice — patient, deliberate, unmistakably his — is something I'll never forget.
+
+The same voice that once called airplane tail numbers would later call Bingo numbers.
 
 ---
 
 ## ❄️ QTS: Technology Ahead of Its Time
 
-This was the mid‑1980s. Personal computers were primitive. There was no internet. No mobile phones. No cloud.
+This was the mid-1980s. Personal computers were primitive. There was no internet. No mobile phones. No cloud.
 
-But my dad discovered a piece of ISA hardware called **Big Mouth**, a voice playback board. Using it, along with MS‑DOS and his own programming skills, he built something remarkable: a **telephone‑based aircraft scheduling system**.
+But my dad built something remarkable.
 
-Members of the GACE club could call in by phone, listen to spoken prompts, and reserve aircraft without ever driving to the airport.
-
-He called it the **QTS Scheduling System**.
-
-The system was deployed at GACE, and members loved it. So much so that my dad went on to sell copies of QTS to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was.
+The QTS system was deployed at GACE, and members loved it. So much so that he went on to sell copies to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was.
 
 *This was interactive voice technology, built by hand, years before it was commonplace.*
 
@@ -50,17 +94,15 @@ The system was deployed at GACE, and members loved it. So much so that my dad we
 
 ## ❄️ From Airplanes to Bingo
 
-Every Christmas, our family had a tradition. We played Bingo.
+Every Christmas, the family gathered. Mom bought the prizes. The table was set. And then came the question:
+
+**Why not build a Bingo caller?**
 
 ![The Halikan Luggable PC](pops_bingo_brief/halikan_luggable.jpeg)
 
 *The Halikan "luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
 
-Mom would go out and buy a collection of small, thoughtful, fun prizes. The whole family — kids, grandkids, everyone — would gather together. It wasn't about the prizes. It was about laughter, excitement, and being together.
-
-And my dad had an idea.
-
-If he could build a telephone scheduling system using his own recorded voice… **why not build a Bingo caller?**
+If Pop could build a telephone scheduling system using his own recorded voice, he could certainly build a Bingo caller.
 
 So he did.
 
@@ -78,8 +120,8 @@ They couldn't get enough of hearing Pop's voice calling the numbers. Even after 
 
 Bingo became more than a game.
 
-It became a way for the family to come together.
-A way to remember.
+It became a way for the family to come together.  
+A way to remember.  
 A way for Pop to still be there with us.
 
 ---
@@ -90,13 +132,7 @@ A way for Pop to still be there with us.
 
 ![DOS Directory Listing](pops_bingo_brief/bingo_dir_listing.jpeg)
 
-*The `C:\BINGO` directory listing from the original machine. 83 files totaling just 632KB—including BINGO.EXE, BINGOCARD.EXE, and all 75 of Pop's voice recordings.*
-
-### Family Bingo Memories
-
-![Family Playing Bingo](photos/family-bingo-1.jpg)
-
-*Family gathered around the table, playing Pop's Bingo — a Christmas tradition that spans generations.*
+*The `C:\BINGO` directory listing from the original machine. 83 files totaling just 632KB — including BINGO.EXE, BINGOCARD.EXE, and all 75 of Pop's voice recordings.*
 
 ---
 
@@ -104,13 +140,14 @@ A way for Pop to still be there with us.
 
 This repository exists to **preserve that legacy**.
 
-Not just the code. Not just the audio files. But the spirit of a man who:
+Not just the code. Not just the audio files. But the spirit of a family who:
 
-* Solved problems when tools were limited
+* Gathered together every Christmas Eve
+* Honored their heritage — Italian and Irish alike
 * Built technology to bring people together
-* Understood that the most important thing technology can do is **create joy and connection**
+* Understood that the most important thing we can do is **create joy and connection**
 
-**Pop's Bingo** is a love letter to family, tradition, and a voice that will always call the next number.
+**Pop's Bingo** is a love letter to Nana Mae, to Mom Marge, to Pop, and to the generations who gather around the table every Christmas.
 
 ---
 
@@ -185,4 +222,4 @@ sox -r 11025 -c 1 -b 8 -e unsigned-integer B12 B12.wav
 
 ---
 
-*With love, for Nana Mae, for Pop, and for the generations who gather around the table every Christmas.* 🎄
+*With love, for Nana Mae, for Mom Marge, for Pop, and for the generations who gather around the table every Christmas.* 🎄
