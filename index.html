@@ -10,7 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles/main.css?v=4" />
+  <link rel="stylesheet" href="styles/main.css?v=5" />
 </head>
 <body>
   <!-- Snowfall effect -->
@@ -71,6 +71,17 @@
       <div class="remaining">
         <span class="remaining__count" id="remainingCount">75</span>
         <span class="remaining__label">balls remaining</span>
+      </div>
+
+      <!-- QR Code for Player Cards -->
+      <div class="qr-section">
+        <div class="qr-code">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://pops-bingo.web.app/card.html&bgcolor=0d1f0d&color=ffd700" 
+               alt="Scan for your bingo card"
+               width="120"
+               height="120" />
+        </div>
+        <div class="qr-label">📱 Scan for your card!</div>
       </div>
     </aside>
 

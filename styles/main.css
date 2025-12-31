@@ -482,6 +482,40 @@ body {
 }
 
 /* ========================================
+   QR Code Section
+   ======================================== */
+.qr-section {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 2px dashed rgba(255, 215, 0, 0.4);
+}
+
+.qr-code {
+  display: inline-block;
+  padding: 8px;
+  background: #0d1f0d;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.qr-code img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+
+.qr-label {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
    Main Content Area
    ======================================== */
 .main {

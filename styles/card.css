@@ -1,0 +1,273 @@
+/* Pop's Christmas Bingo - Mobile Card Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --christmas-red: #c41e3a;
+    --christmas-green: #1a5f2a;
+    --christmas-gold: #ffd700;
+    --snow-white: #fffafa;
+    --card-bg: #0d1f0d;
+    --cell-bg: #1a3d1a;
+    --cell-marked: #ffd700;
+    --cell-marked-text: #1a3d1a;
+    --free-space: #c41e3a;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #0a1a0a 0%, #1a3d1a 50%, #0a1a0a 100%);
+    color: var(--snow-white);
+    overflow: hidden;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-top: env(safe-area-inset-top, 16px);
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+
+/* Header */
+.card-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card-header h1 {
+    font-size: clamp(24px, 6vw, 36px);
+    color: var(--christmas-gold);
+    text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+    margin-bottom: 4px;
+}
+
+.card-header .subtitle {
+    font-size: clamp(14px, 3.5vw, 18px);
+    color: rgba(255, 250, 250, 0.8);
+}
+
+/* Bingo Card */
+.bingo-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    padding: 12px;
+    border: 3px solid var(--christmas-gold);
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.2),
+        inset 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+/* B-I-N-G-O Letters */
+.card-letters {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.letter {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 5vw, 32px);
+    font-weight: 800;
+    border-radius: 8px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.letter-b { background: linear-gradient(135deg, #c41e3a, #8b0000); color: white; }
+.letter-i { background: linear-gradient(135deg, #1a5f2a, #0d3d0d); color: white; }
+.letter-n { background: linear-gradient(135deg, #c41e3a, #8b0000); color: white; }
+.letter-g { background: linear-gradient(135deg, #1a5f2a, #0d3d0d); color: white; }
+.letter-o { background: linear-gradient(135deg, #c41e3a, #8b0000); color: white; }
+
+/* Number Grid */
+.card-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 6px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cell-bg);
+    border-radius: 8px;
+    font-size: clamp(18px, 5vw, 28px);
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 2px solid transparent;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.cell.marked {
+    background: var(--cell-marked);
+    color: var(--cell-marked-text);
+    border-color: #fff;
+    box-shadow: 
+        0 0 15px rgba(255, 215, 0, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: mark-pulse 0.3s ease;
+}
+
+@keyframes mark-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.cell.free-space {
+    background: var(--free-space);
+    color: white;
+    font-size: clamp(12px, 3vw, 16px);
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.2;
+    border-color: var(--christmas-gold);
+}
+
+.cell.free-space.marked {
+    background: var(--christmas-gold);
+    color: var(--christmas-red);
+}
+
+/* Actions */
+.card-actions {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.new-card-btn {
+    background: linear-gradient(135deg, var(--christmas-red), #8b0000);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+}
+
+.new-card-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(196, 30, 58, 0.4);
+}
+
+/* Footer */
+.card-footer {
+    text-align: center;
+    margin-top: 16px;
+    opacity: 0.7;
+}
+
+.card-footer p {
+    font-size: 14px;
+}
+
+.card-footer .hint {
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* Snowfall effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(1px 1px at 90px 40px, white, transparent),
+        radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.6), transparent),
+        radial-gradient(1px 1px at 160px 120px, white, transparent);
+    background-size: 200px 200px;
+    animation: snowfall 10s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes snowfall {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 200px; }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 8px;
+    }
+    
+    .card-header {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    .card-header h1 {
+        font-size: 20px;
+    }
+    
+    .card-header .subtitle {
+        font-size: 12px;
+    }
+    
+    .bingo-card {
+        flex: 1;
+        padding: 8px;
+    }
+    
+    .card-letters {
+        gap: 4px;
+        margin-bottom: 4px;
+    }
+    
+    .card-grid {
+        gap: 4px;
+    }
+    
+    .card-actions {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 12px;
+    }
+    
+    .new-card-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .card-footer {
+        display: none;
+    }
+}
+
