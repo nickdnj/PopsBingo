@@ -138,16 +138,39 @@ A way for Pop to still be there with us.
 
 ---
 
+## ❄️ Christmas 2025 — The First Without Pop
+
+Christmas 2025 was the first without my dad. He passed away earlier that year.
+
+My brother hosted Christmas Eve. He had the old Halikan — the computer my dad developed QTS and the Bingo game on — and he powered it up. He said it worked great.
+
+I got there a few hours later. I tried powering it up. It wouldn't start.
+
+A little panic set in.
+
+After turning the switch on and off a few dozen times... and then a few more dozen times... the screen finally woke up and the machine booted. It was working. Relief.
+
+Then we had to move it to another room. We unplugged it.
+
+The on-and-off switching started again.
+
+Eventually it booted. But then — of course — we had to move it *one more time*.
+
+That's when it hit me: **this machine isn't going to last much longer.**
+
+And if we don't do something, we're going to lose this forever. We're going to lose my dad's voice forever.
+
+That's where I got the idea for this app.
+
+---
+
 ## ❄️ Why This Project Exists
 
-This repository exists to **preserve that legacy**.
+This app exists to be a **vessel** — to hold my dad's voice and my dad's memory.
 
-Not just the code. Not just the audio files. But the spirit of a family who:
+A small part of his legacy.
 
-* Gathered together every Christmas Eve
-* Honored their heritage — Italian and Irish alike
-* Built technology to bring people together
-* Understood that the most important thing we can do is **create joy and connection**
+And on Christmas Eve, that voice will still be there. Calling the numbers. For as long as we're playing Bingo. For as long as we're using this app. For as long as we gather as a family.
 
 **Pop's Bingo** is a love letter to Nana Mae, to Mom Marge, to Pop, and to the generations who gather around the table every Christmas.
 
