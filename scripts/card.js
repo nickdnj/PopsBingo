@@ -19,6 +19,7 @@
     const FREE_SPACE_INDEX = 12; // Center of 5x5 grid (row 2, col 2)
 
     let currentCard = [];
+    let actionHistory = []; // Track mark/unmark actions for undo
 
     /**
      * Generate random unique numbers within a range
@@ -119,13 +120,20 @@
     /**
      * Toggle a cell's marked state
      */
-    function toggleCell(index) {
+    function toggleCell(index, skipHistory = false) {
         const cell = currentCard[index];
         
         // Don't allow unmarking the free space
         if (cell.isFree) return;
 
+        const wasMarked = cell.marked;
         cell.marked = !cell.marked;
+        
+        // Track action for undo (unless we're undoing)
+        if (!skipHistory) {
+            actionHistory.push({ index, wasMarked });
+            updateUndoButton();
+        }
         
         const cellEl = document.querySelector(`.cell[data-index="${index}"]`);
         if (cellEl) {
@@ -139,11 +147,63 @@
     }
 
     /**
+     * Undo the last action
+     */
+    function undo() {
+        if (actionHistory.length === 0) return;
+        
+        const lastAction = actionHistory.pop();
+        toggleCell(lastAction.index, true); // Skip adding to history
+        updateUndoButton();
+        
+        // Haptic feedback
+        if (navigator.vibrate) {
+            navigator.vibrate([10, 30, 10]);
+        }
+    }
+
+    /**
+     * Clear all marked cells (except FREE)
+     */
+    function clearCard() {
+        currentCard.forEach((cell, index) => {
+            if (!cell.isFree && cell.marked) {
+                cell.marked = false;
+                const cellEl = document.querySelector(`.cell[data-index="${index}"]`);
+                if (cellEl) {
+                    cellEl.classList.remove('marked');
+                }
+            }
+        });
+        
+        // Clear history since we're starting fresh
+        actionHistory = [];
+        updateUndoButton();
+        
+        // Haptic feedback
+        if (navigator.vibrate) {
+            navigator.vibrate([20, 50, 20]);
+        }
+    }
+
+    /**
+     * Update the undo button's disabled state
+     */
+    function updateUndoButton() {
+        const undoBtn = document.getElementById('undoBtn');
+        if (undoBtn) {
+            undoBtn.disabled = actionHistory.length === 0;
+        }
+    }
+
+    /**
      * Generate a new card
      */
     function newCard() {
         currentCard = generateCard();
+        actionHistory = []; // Clear history for new card
         renderCard();
+        updateUndoButton();
         
         // Haptic feedback
         if (navigator.vibrate) {
@@ -158,8 +218,10 @@
         // Generate initial card
         newCard();
 
-        // New card button
+        // Button event listeners
         document.getElementById('newCardBtn').addEventListener('click', newCard);
+        document.getElementById('clearCardBtn').addEventListener('click', clearCard);
+        document.getElementById('undoBtn').addEventListener('click', undo);
 
         // Prevent double-tap zoom on iOS
         document.addEventListener('touchend', (e) => {

@@ -156,25 +156,66 @@ html, body {
 
 /* Actions */
 .card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-top: 16px;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
-.new-card-btn {
-    background: linear-gradient(135deg, var(--christmas-red), #8b0000);
+.action-btn {
     color: white;
     border: none;
-    padding: 14px 32px;
-    font-size: 18px;
+    padding: 12px 20px;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+.clear-btn {
+    background: linear-gradient(135deg, #666, #444);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clear-btn:active {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.undo-btn {
+    background: linear-gradient(135deg, var(--christmas-green), #0d3d0d);
+    box-shadow: 0 4px 15px rgba(26, 95, 42, 0.4);
+}
+
+.undo-btn:active {
+    box-shadow: 0 2px 8px rgba(26, 95, 42, 0.4);
+}
+
+.undo-btn:disabled {
+    background: linear-gradient(135deg, #555, #333);
+    box-shadow: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.undo-btn:disabled:active {
+    transform: none;
+}
+
+.new-card-btn {
+    background: linear-gradient(135deg, var(--christmas-red), #8b0000);
     box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
 }
 
 .new-card-btn:active {
-    transform: scale(0.95);
     box-shadow: 0 2px 8px rgba(196, 30, 58, 0.4);
 }
 
@@ -257,13 +298,15 @@ body::before {
     
     .card-actions {
         display: flex;
+        flex-direction: column;
         align-items: center;
+        gap: 6px;
         margin: 0 0 0 12px;
     }
     
-    .new-card-btn {
-        padding: 10px 20px;
-        font-size: 14px;
+    .action-btn {
+        padding: 8px 14px;
+        font-size: 12px;
     }
     
     .card-footer {
