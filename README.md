@@ -6,7 +6,7 @@
 
 ## ❄️ A Long Island Christmas
 
-My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, **Nana Mae**.
+My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, **Nana**.
 
 Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. There was always chicken or lasagna for family that didn't like fish. It was never about perfection. It was about being together.
 
