@@ -8,9 +8,9 @@
 
 My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, **Nana Mae**.
 
-Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. My brother's wife hated seafood, so there was always chicken on the table too. It was never about perfection. It was about being together.
+Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. There was always chicken or lasagna for family that didn't like fish. It was never about perfection. It was about being together.
 
-**Nana Mae** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Aunt Eileen** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
+**Nana Mae** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Antie** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
 
 And every Christmas Eve, after the food was cleared and the table was set fresh, we played **Bingo**.
 
