@@ -1,0 +1,11 @@
+# Firebase
+.firebase/
+.firebaserc
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+*.swp
+
