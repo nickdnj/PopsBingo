@@ -212,16 +212,35 @@
     }
 
     /**
+     * Add click and touch handlers to a button
+     */
+    function addButtonHandler(buttonId, handler) {
+        const btn = document.getElementById(buttonId);
+        if (!btn) return;
+        
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            handler();
+        });
+        
+        btn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            handler();
+        });
+    }
+
+    /**
      * Initialize the app
      */
     function init() {
         // Generate initial card
         newCard();
 
-        // Button event listeners
-        document.getElementById('newCardBtn').addEventListener('click', newCard);
-        document.getElementById('clearCardBtn').addEventListener('click', clearCard);
-        document.getElementById('undoBtn').addEventListener('click', undo);
+        // Button event listeners (with proper touch support)
+        addButtonHandler('newCardBtn', newCard);
+        addButtonHandler('clearCardBtn', clearCard);
+        addButtonHandler('undoBtn', undo);
 
         // Prevent double-tap zoom on iOS
         document.addEventListener('touchend', (e) => {

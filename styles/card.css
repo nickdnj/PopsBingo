@@ -158,15 +158,19 @@ html, body {
 .card-actions {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     margin-top: 16px;
     flex-wrap: wrap;
 }
 
 .action-btn {
+    /* Consistent sizing for all buttons */
+    flex: 1 1 auto;
+    min-width: 100px;
+    max-width: 140px;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 14px 20px;
     font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
@@ -174,7 +178,13 @@ html, body {
     transition: all 0.2s ease;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
+    /* Touch improvements */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
 }
 
 .action-btn:active {
@@ -204,10 +214,7 @@ html, body {
     box-shadow: none;
     opacity: 0.5;
     cursor: not-allowed;
-}
-
-.undo-btn:disabled:active {
-    transform: none;
+    pointer-events: none;
 }
 
 .new-card-btn {
@@ -305,8 +312,10 @@ body::before {
     }
     
     .action-btn {
-        padding: 8px 14px;
-        font-size: 12px;
+        min-width: 90px;
+        max-width: 120px;
+        padding: 10px 16px;
+        font-size: 13px;
     }
     
     .card-footer {
