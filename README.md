@@ -48,9 +48,9 @@ Pop built the technology. But Mom built the moment.
 
 She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.
 
-Now at 86, she's slowed down — and has graciously passed the torch to my sister **Peggy** and my sister-in-law **Eileen**. Their families are picking up the mantle and spreading out. Peggy's son **Kevin** lives in upstate New York. My brother's kids — **Nicky**, **Ashley**, and **Joey** — still live near home and come together for Christmas Eve.
+Now at 86, she's slowed down a bit — and has graciously passed the torch. My sister **Peggy**, my sister-in-law **Eileen**, and my wife **Cathie** have stepped up. Their families are picking up the mantle. Peggy's son **Kevin** lives in upstate New York. My brother's kids — **Nicky**, **Ashley**, and **Joey** — still live near home and gather for Christmas Eve.
 
-And even the nephews' wives and girlfriends are joining in, winning prizes, becoming part of the tradition. The circle keeps growing.
+And the circle keeps growing. The nephews' wives and girlfriends aren't just winning prizes now — they're buying them too. Everyone's part of the tradition. Everyone's part of the process.
 
 ---
 
@@ -171,6 +171,8 @@ And on Christmas Eve, that voice will still be there. Calling the numbers. For a
 **Pop's Bingo** is a love letter to Nana Mae, to Mom Marge, to Pop, and to the generations who gather around the table every Christmas.
 
 **Thanks, Dad.**
+
+And I have to say — I couldn't have built this without tools like **Cursor** and **Claude Opus 4.5**. They enabled me to develop this app in just a few days. It's amazing what's possible now. Thank you.
 
 ---
 
