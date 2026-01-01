@@ -18,7 +18,7 @@ And every Christmas Eve, after the food was cleared and the table was set fresh,
 
 ## ❄️ Nana Mae — Where It All Began
 
-Before there was code, before there were sound cards and luggable computers, there was **Nana**.
+That Christmas Eve Bingo tradition? It all started with **Nana**.
 
 ![Nana Mae](photos/nana-mae.jpg)
 
