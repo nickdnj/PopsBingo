@@ -136,7 +136,11 @@ After turning the switch on and off a few dozen times... and then a few more doz
 
 Then we had to move it to another room. We unplugged it. The on-and-off switching started again. Eventually it booted. But then — of course — we had to move it *one more time*.
 
-That's when it hit me: **this machine isn't going to last much longer.**
+Finally, we got it set up in its spot. It booted. And we played Bingo.
+
+It was a great session. Everyone was laughing, having a wonderful time, hearing Pop's voice call out the numbers — like he was right there with us.
+
+But in the back of my mind, I couldn't shake the thought: **this machine isn't going to last much longer.**
 
 And if we don't do something, we're going to lose this forever. We're going to lose my dad's voice forever.
 
