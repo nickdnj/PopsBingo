@@ -87,27 +87,12 @@ async function unlockAudio() {
     }
     
     // Play a silent buffer to fully unlock
+    // This is all we need - once AudioContext is unlocked, Audio elements can play
     const buffer = audioContext.createBuffer(1, 1, 22050);
     const source = audioContext.createBufferSource();
     source.buffer = buffer;
     source.connect(audioContext.destination);
     source.start(0);
-    
-    // Also "touch" each Audio object to unlock them
-    const unlockPromises = [];
-    voicePack.files.forEach((audio, label) => {
-      const promise = audio.play()
-        .then(() => {
-          audio.pause();
-          audio.currentTime = 0;
-        })
-        .catch(() => {
-          // Ignore errors - some may not be loaded yet
-        });
-      unlockPromises.push(promise);
-    });
-    
-    await Promise.all(unlockPromises);
     
     audioUnlocked = true;
     console.log('🔊 Audio unlocked successfully!');
