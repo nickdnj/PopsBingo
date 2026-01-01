@@ -122,13 +122,25 @@ When Bingo started, it wasn't a generic voice. It was **Pop**. Calling every num
 
 The grandkids loved it.
 
-They couldn't get enough of hearing Pop's voice calling the numbers. Even after he passed, that voice — warm, familiar, unmistakably his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.
+They couldn't get enough of hearing Pop's voice calling the numbers. That voice — warm, familiar, unmistakably his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.
 
-Bingo became more than a game.
+Bingo became more than a game. It became a way for the family to come together. A way to remember. A way for Pop to still be there with us.
 
-It became a way for the family to come together.  
-A way to remember.  
-A way for Pop to still be there with us.
+Then came **Christmas 2025** — the first without my dad. He passed away earlier that year.
+
+My brother hosted Christmas Eve. He had the old Halikan — the computer my dad developed QTS and the Bingo game on — and he powered it up. He said it worked great.
+
+I got there a few hours later. I tried powering it up. It wouldn't start. A little panic set in.
+
+After turning the switch on and off a few dozen times... and then a few more dozen times... the screen finally woke up and the machine booted. Relief.
+
+Then we had to move it to another room. We unplugged it. The on-and-off switching started again. Eventually it booted. But then — of course — we had to move it *one more time*.
+
+That's when it hit me: **this machine isn't going to last much longer.**
+
+And if we don't do something, we're going to lose this forever. We're going to lose my dad's voice forever.
+
+That's where I got the idea for this app.
 
 ---
 
@@ -139,32 +151,6 @@ A way for Pop to still be there with us.
 ![DOS Directory Listing](pops_bingo_brief/bingo_dir_listing.jpeg)
 
 *The `C:\BINGO` directory listing from the original machine. 83 files totaling just 632KB — including BINGO.EXE, BINGOCARD.EXE, and all 75 of Pop's voice recordings.*
-
----
-
-## ❄️ Christmas 2025 — The First Without Pop
-
-Christmas 2025 was the first without my dad. He passed away earlier that year.
-
-My brother hosted Christmas Eve. He had the old Halikan — the computer my dad developed QTS and the Bingo game on — and he powered it up. He said it worked great.
-
-I got there a few hours later. I tried powering it up. It wouldn't start.
-
-A little panic set in.
-
-After turning the switch on and off a few dozen times... and then a few more dozen times... the screen finally woke up and the machine booted. It was working. Relief.
-
-Then we had to move it to another room. We unplugged it.
-
-The on-and-off switching started again.
-
-Eventually it booted. But then — of course — we had to move it *one more time*.
-
-That's when it hit me: **this machine isn't going to last much longer.**
-
-And if we don't do something, we're going to lose this forever. We're going to lose my dad's voice forever.
-
-That's where I got the idea for this app.
 
 ---
 
