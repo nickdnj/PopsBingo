@@ -66,6 +66,62 @@ const voicePack = {
   count: 0,
 };
 
+// iOS Audio unlock state
+let audioUnlocked = false;
+let audioContext = null;
+
+// Unlock audio for iOS Safari
+// iOS requires a user gesture to enable audio playback
+async function unlockAudio() {
+  if (audioUnlocked) return;
+  
+  console.log('🔊 Unlocking audio for iOS...');
+  
+  try {
+    // Create and play a silent audio context to unlock iOS audio
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    
+    // Resume the context if it's suspended (iOS Safari)
+    if (audioContext.state === 'suspended') {
+      await audioContext.resume();
+    }
+    
+    // Play a silent buffer to fully unlock
+    const buffer = audioContext.createBuffer(1, 1, 22050);
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioContext.destination);
+    source.start(0);
+    
+    // Also "touch" each Audio object to unlock them
+    const unlockPromises = [];
+    voicePack.files.forEach((audio, label) => {
+      const promise = audio.play()
+        .then(() => {
+          audio.pause();
+          audio.currentTime = 0;
+        })
+        .catch(() => {
+          // Ignore errors - some may not be loaded yet
+        });
+      unlockPromises.push(promise);
+    });
+    
+    await Promise.all(unlockPromises);
+    
+    audioUnlocked = true;
+    console.log('🔊 Audio unlocked successfully!');
+    
+    // If voice files weren't loaded on initial page load, try again
+    if (!voicePack.loaded || voicePack.count === 0) {
+      console.log('🔊 Retrying voice file load after unlock...');
+      await loadVoiceFiles();
+    }
+  } catch (err) {
+    console.warn('🔊 Audio unlock failed:', err);
+  }
+}
+
 // Utility: Shuffle array
 function shuffle(array) {
   const arr = [...array];
@@ -268,6 +324,7 @@ function updateHistory() {
 }
 
 // Auto-load voice files from the audio folder
+// Uses fetch() + blob URLs for better iOS Safari compatibility
 async function loadVoiceFiles() {
   const audioPath = 'audio';
   const validRanges = {
@@ -281,26 +338,34 @@ async function loadVoiceFiles() {
   let loadedCount = 0;
   const loadPromises = [];
   
-  // Generate all expected file paths and try to load them
+  // Generate all expected file paths and try to load them using fetch
+  // fetch() works more reliably on iOS than Audio.src with preload
   Object.entries(validRanges).forEach(([letter, [min, max]]) => {
     for (let num = min; num <= max; num++) {
       const label = `${letter}${num}`;
-      const audio = new Audio();
+      const url = `${audioPath}/${label}.wav`;
       
-      const loadPromise = new Promise((resolve) => {
-        audio.addEventListener('canplaythrough', () => {
+      const loadPromise = fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+          }
+          return response.blob();
+        })
+        .then(blob => {
+          // Create Audio from blob URL - this works on iOS
+          const blobUrl = URL.createObjectURL(blob);
+          const audio = new Audio(blobUrl);
+          audio.preload = 'auto';
           voicePack.files.set(label, audio);
           loadedCount++;
-          resolve(true);
-        }, { once: true });
-        
-        audio.addEventListener('error', () => {
-          resolve(false);
-        }, { once: true });
-        
-        audio.src = `${audioPath}/${label}.wav`;
-        audio.preload = 'auto';
-      });
+          return true;
+        })
+        .catch(err => {
+          // File doesn't exist or failed to load - that's okay
+          console.debug(`Could not load ${label}:`, err.message);
+          return false;
+        });
       
       loadPromises.push(loadPromise);
     }
@@ -313,6 +378,7 @@ async function loadVoiceFiles() {
   voicePack.loaded = loadedCount > 0;
   
   updateVoiceStatus(loadedCount);
+  console.log(`🎙️ Voice files loaded: ${loadedCount}/75`);
   
   return loadedCount;
 }
@@ -358,10 +424,19 @@ function playVoiceCall(number) {
     
     audio.currentTime = 0;
     audio.play().catch(err => {
-      console.warn('Voice playback failed:', err);
+      // Detailed error logging for debugging iOS issues
+      console.error(`Voice playback failed for ${label}:`, err.name, err.message);
+      console.log('Audio state:', {
+        paused: audio.paused,
+        readyState: audio.readyState,
+        src: audio.src ? 'set' : 'empty',
+        audioUnlocked: audioUnlocked
+      });
       playFallbackSound('call');
     });
     return true;
+  } else {
+    console.warn(`No audio loaded for ${label}. voicePack.loaded=${voicePack.loaded}, count=${voicePack.count}`);
   }
   return false;
 }
@@ -485,8 +560,16 @@ function isStoryModalOpen() {
 
 // Wire up event listeners
 function wireEvents() {
-  elements.callBtn.addEventListener('click', callNextNumber);
-  elements.resetBtn.addEventListener('click', resetSession);
+  // Wrap button handlers to unlock audio on first interaction (iOS)
+  elements.callBtn.addEventListener('click', async () => {
+    await unlockAudio();
+    callNextNumber();
+  });
+  
+  elements.resetBtn.addEventListener('click', async () => {
+    await unlockAudio();
+    resetSession();
+  });
   
   // Story modal (Easter egg) - click logo to open
   if (elements.logo && elements.storyModal) {
@@ -526,11 +609,11 @@ function wireEvents() {
     
     if (e.code === 'Space' && !e.repeat) {
       e.preventDefault();
-      callNextNumber();
+      unlockAudio().then(() => callNextNumber());
     }
     if (e.code === 'KeyR' && e.ctrlKey) {
       e.preventDefault();
-      resetSession();
+      unlockAudio().then(() => resetSession());
     }
   });
   
