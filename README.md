@@ -156,13 +156,21 @@ That's where I got the idea for this app.
 
 ## ❄️ Why This Project Exists
 
-This app exists to be a **vessel** — to hold my dad's voice and my dad's memory.
+I learned a lot from my dad. I'm a lot like him.
 
-A small part of his legacy.
+When I see a problem, I want to fix it. That's what he did. That's what he taught me — not with words, but by example. He saw a problem with airplane scheduling, and he fixed it. He saw a way to make Christmas Bingo better, and he built it.
+
+When that old Halikan struggled to power on Christmas 2025, I saw a problem too. This machine isn't going to last forever. And if it dies, we lose his voice. We lose this piece of him.
+
+But I could fix it. So I did.
+
+This app exists to be a **vessel** — to hold my dad's voice and my dad's memory. A small part of his legacy. And in a way, building it is how I honor him. By being like him. By seeing a problem and fixing it.
 
 And on Christmas Eve, that voice will still be there. Calling the numbers. For as long as we're playing Bingo. For as long as we're using this app. For as long as we gather as a family.
 
 **Pop's Bingo** is a love letter to Nana Mae, to Mom Marge, to Pop, and to the generations who gather around the table every Christmas.
+
+**Thanks, Dad.**
 
 ---
 

@@ -1269,6 +1269,13 @@ body {
   text-decoration: underline;
 }
 
+.story-thanks {
+  margin-top: 24px;
+  font-size: 1.3em;
+  color: var(--gold);
+  text-align: center;
+}
+
 /* Story Lists */
 .story-list {
   margin: 16px 0;
