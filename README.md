@@ -168,7 +168,7 @@ This app exists to be a **vessel** — to hold my dad's voice and my dad's memor
 
 And on Christmas Eve, that voice will still be there. Calling the numbers. For as long as we're playing Bingo. For as long as we're using this app. For as long as we gather as a family.
 
-**Pop's Bingo** is a love letter to Nana Mae, to Mom Marge, to Pop, and to the generations who gather around the table every Christmas.
+**Pop's Bingo** is a love letter to family, to tradition, and to the voice that will always call the next number.
 
 **Thanks, Dad.**
 
@@ -247,4 +247,4 @@ sox -r 11025 -c 1 -b 8 -e unsigned-integer B12 B12.wav
 
 ---
 
-*With love, for Nana Mae, for Mom Marge, for Pop, and for the generations who gather around the table every Christmas.* 🎄
+*With love — for Nana, for Mom, for Dad, and for all the generations who gather around the table every Christmas.* 🎄
