@@ -1248,6 +1248,27 @@ body {
   color: var(--snow-white);
 }
 
+.story-github-link {
+  margin-top: 24px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.story-github-link a {
+  color: var(--ice-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.story-github-link a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
 /* Story Lists */
 .story-list {
   margin: 16px 0;
