@@ -176,7 +176,63 @@ And on Christmas Eve, that voice will still be there. Calling the numbers. For a
 
 **Thanks, Dad.**
 
-And I have to say — I couldn't have built this without tools like **Cursor** and **Claude Opus 4.5**. They enabled me to develop this app in just a few days. It's amazing what's possible now. Thank you.
+---
+
+## 🛠️ How This Was Built — 100% Vibe Coded
+
+This entire app was built through conversation. No traditional coding. Just me talking to **Claude Opus 4.5** inside **Cursor**, describing what I wanted, and watching it come to life.
+
+### The Journey
+
+It started with a simple question: *"I have my dad's old DOS Bingo app with voice files. How do I preserve this?"*
+
+From there, we talked through everything:
+
+- **Data extraction planning** — We discussed how to pull files from an old IDE/PATA hard drive, what audio formats to expect, sample rates, bit depths, and how to convert raw PCM to WAV.
+
+- **Placeholder voices** — While I waited for the hardware to extract Pop's actual voice files, Claude generated a shell script that used macOS text-to-speech to create 75 placeholder audio files. The app worked immediately.
+
+- **The web app itself** — HTML, CSS, JavaScript — all generated through conversation. I'd describe what I wanted: *"Make the calling numbers bigger so they're visible from the back of the room on a TV."* And it happened. We went through multiple iterations using `clamp()` and viewport units until the layout was perfect.
+
+- **The Easter Egg story** — I wanted to tell the family history. So I just... talked. I told Claude about Nana Mae, about Mom Marge, about how Pop built QTS for the flying club, about Christmas Eve traditions. Claude turned my rambling voice messages into the story you see when you click the logo.
+
+- **Firebase deployment** — I said *"deploy this to the cloud so I can share it with family."* Claude walked me through Firebase Hosting setup, created the config files, and deployed it. Live in minutes.
+
+- **iOS audio fix** — The app worked great on desktop, but audio wouldn't play on iPhone. Classic iOS Safari restrictions. Claude diagnosed the issue (audio needs user gesture to unlock), rewrote the audio loading to use `fetch()` + blob URLs, and added an unlock mechanism. Fixed.
+
+- **The echo bug** — First tap on iPhone made crazy loud echoing sounds. Turned out the "unlock" code was playing all 75 audio files simultaneously for a split second. Claude found it, removed the offending loop, deployed the fix. Clean.
+
+- **QR code for mobile cards** — I wanted family members to scan a QR code and get a bingo card on their phone. Claude created `card.html` with random card generation, tap-to-mark functionality, and festive styling. The buttons went through a few iterations until they were just right.
+
+- **Every story update** — Each time I remembered a detail — *"Actually, we called Aunt Eileen 'Auntie'"* or *"My mom is still alive, she's 86!"* or *"Add the part about Christmas 2025 when the machine almost didn't boot"* — I'd just say it, and Claude would update both the app and the README.
+
+### What "Vibe Coding" Feels Like
+
+I'm not a frontend developer. I can read code, I understand systems, but I don't write CSS for fun. This project would have taken me weeks to build traditionally — or more likely, I would have given up.
+
+Instead, I had a conversation. I described the *feeling* I wanted. I said things like:
+
+- *"Make this feel more connected"*
+- *"The fonts need to balance with the calling field"*
+- *"Make the thank-you section come from my perspective — Dad, Mom, Nana"*
+
+And Claude understood. Not just the technical requirements, but the *intent*. The emotional weight. The family context.
+
+### The Result
+
+In a few days of conversation — not continuous work, just talking when I had time — I went from a dying DOS machine to a modern web app that:
+
+- Runs on any device
+- Preserves my dad's voice forever
+- Tells our family story
+- Can be shared with a simple link
+- Will work for generations
+
+This README, the app, the story modal, the mobile card page, the deployment — all of it came from this chat.
+
+**100% vibe coded. Zero traditional development.**
+
+And honestly? It's fucking awesome.
 
 ---
 
