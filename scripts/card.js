@@ -117,6 +117,104 @@
         });
     }
 
+    // ========================================
+    // Story Modal
+    // ========================================
+
+    function openStoryModal() {
+        const modal = document.getElementById('storyModal');
+        if (modal) {
+            modal.classList.add('story-modal--open');
+            modal.setAttribute('aria-hidden', 'false');
+        }
+    }
+
+    function closeStoryModal() {
+        const modal = document.getElementById('storyModal');
+        if (modal) {
+            modal.classList.remove('story-modal--open');
+            modal.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    function initStoryModal() {
+        const storyLink = document.getElementById('storyLink');
+        const storyModal = document.getElementById('storyModal');
+        const storyClose = document.getElementById('storyClose');
+        const storyOverlay = document.querySelector('.story-modal__overlay');
+
+        if (storyLink) {
+            storyLink.addEventListener('click', openStoryModal);
+        }
+
+        if (storyClose) {
+            storyClose.addEventListener('click', closeStoryModal);
+        }
+
+        if (storyOverlay) {
+            storyOverlay.addEventListener('click', closeStoryModal);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && storyModal && storyModal.classList.contains('story-modal--open')) {
+                closeStoryModal();
+            }
+        });
+    }
+
+    // ========================================
+    // Story Audio Playback
+    // ========================================
+
+    const storyAudioCache = new Map();
+    let currentStoryAudio = null;
+
+    async function playStoryAudio(filename) {
+        const audioPath = `audio/${filename}.wav`;
+
+        // Stop any currently playing audio
+        if (currentStoryAudio) {
+            currentStoryAudio.pause();
+            currentStoryAudio.currentTime = 0;
+            document.querySelectorAll('.story-audio-btn.playing').forEach(btn => {
+                btn.classList.remove('playing');
+            });
+        }
+
+        const clickedBtn = document.querySelector(`.story-audio-btn[onclick*="${filename}"]`);
+
+        try {
+            let audio = storyAudioCache.get(filename);
+
+            if (!audio) {
+                const response = await fetch(audioPath);
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const blob = await response.blob();
+                const blobUrl = URL.createObjectURL(blob);
+                audio = new Audio(blobUrl);
+                storyAudioCache.set(filename, audio);
+            }
+
+            audio.onended = () => {
+                if (clickedBtn) clickedBtn.classList.remove('playing');
+                currentStoryAudio = null;
+            };
+
+            if (clickedBtn) clickedBtn.classList.add('playing');
+            currentStoryAudio = audio;
+            audio.currentTime = 0;
+            await audio.play();
+
+        } catch (err) {
+            console.error(`Failed to play story audio ${filename}:`, err);
+            if (clickedBtn) clickedBtn.classList.remove('playing');
+        }
+    }
+
+    // Make playStoryAudio available globally
+    window.playStoryAudio = playStoryAudio;
+
     /**
      * Initialize
      */
@@ -133,6 +231,9 @@
         document.getElementById('newCardBtn').onclick = function() {
             window.location.reload();
         };
+
+        // Initialize story modal
+        initStoryModal();
     }
 
     // Start when DOM is ready

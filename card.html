@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>🎄 Your Bingo Card</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="stylesheet" href="styles/card.css?v=3">
+    <link rel="stylesheet" href="styles/card.css?v=4">
 </head>
 <body>
     <div class="card-container">
@@ -35,12 +35,84 @@
         </div>
 
         <footer class="card-footer">
-            <p>Pop's Christmas Bingo</p>
+            <p class="footer-link" id="storyLink">Pop's Christmas Bingo</p>
             <p class="hint">This card was randomly generated just for you!</p>
         </footer>
     </div>
 
-    <script src="scripts/card.js"></script>
+    <!-- Story Modal (Easter Egg - tap footer to reveal) -->
+    <div class="story-modal" id="storyModal" aria-hidden="true">
+      <div class="story-modal__overlay"></div>
+      <div class="story-modal__container">
+        <button class="story-modal__close" id="storyClose" aria-label="Close story">&times;</button>
+
+        <div class="story-modal__content">
+          <!-- Header -->
+          <header class="story-header">
+            <h1 class="story-header__title">Pop's Bingo — A Family Story</h1>
+            <p class="story-header__subtitle">A love letter to family, tradition, and a voice that will always call the next number</p>
+          </header>
+
+          <!-- Section: A Long Island Christmas -->
+          <section class="story-section">
+            <h2 class="story-section__title">A Long Island Christmas</h2>
+            <div class="story-text">
+              <p>My name is <strong>Nick DeMarco</strong>. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, <strong>Nana</strong>.</p>
+              <p>Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic <em>Feast of the Seven Fishes</em>, though we adapted it to suit our tastes. There was always chicken or lasagna for family that didn't like fish. It was never about perfection. It was about being together.</p>
+              <p>And every Christmas Eve, after the food was cleared and the table was set fresh, we played <strong>Bingo</strong>.</p>
+            </div>
+          </section>
+
+          <!-- Section: The Voice I Remember -->
+          <section class="story-section">
+            <h2 class="story-section__title">The Voice I Remember</h2>
+            <div class="story-text">
+              <p>My dad, <strong>Nick DeMarco</strong>, was a successful business owner who loved learning new things. In the mid-1980s, he built a telephone-based aircraft scheduling system using a voice playback board called the <strong>Big Mouth</strong>. He recorded his voice calling airplane tail numbers:</p>
+              <div class="story-audio-clips">
+                <button class="story-audio-btn" onclick="playStoryAudio('N739SF')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N739SF</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N734LH')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N734LH</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N704VB')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N704VB</span>
+                </button>
+              </div>
+              <p><strong>The same voice that once called airplane tail numbers would later call Bingo numbers.</strong></p>
+            </div>
+          </section>
+
+          <!-- Section: Why This Exists -->
+          <section class="story-section">
+            <h2 class="story-section__title">Why This Exists</h2>
+            <div class="story-text">
+              <p><strong>Christmas 2025</strong> was the first without my dad. He passed away earlier that year.</p>
+              <p>The old computer that ran his Bingo program barely powered on. I knew if we didn't do something, we'd lose his voice forever.</p>
+              <p>So I recovered the data, reverse-engineered the 40-year-old audio format, and built this app. Now Pop's voice will call the numbers for as long as our family gathers to play Bingo.</p>
+              <p><strong>Pop's Bingo</strong> is a love letter to family, to tradition, and to the voice that will always call the next number.</p>
+              <p class="story-thanks"><strong>Thanks, Dad.</strong></p>
+            </div>
+          </section>
+
+          <!-- Link to full story -->
+          <div class="story-link-full">
+            <a href="index.html" target="_blank">Read the full story on the main app →</a>
+          </div>
+
+          <!-- Footer -->
+          <footer class="story-footer">
+            <p>Tap anywhere outside to close</p>
+            <p class="story-footer__hint">🎄 Merry Christmas from the DeMarco family 🎄</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/card.js?v=2"></script>
 </body>
 </html>
 
