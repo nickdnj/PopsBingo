@@ -215,6 +215,70 @@
     // Make playStoryAudio available globally
     window.playStoryAudio = playStoryAudio;
 
+    // ========================================
+    // Photo Lightbox
+    // ========================================
+
+    function openLightbox(imageSrc, caption) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        if (lightbox && lightboxImage) {
+            lightboxImage.src = imageSrc;
+            lightboxImage.alt = caption || '';
+            if (lightboxCaption) {
+                lightboxCaption.textContent = caption || '';
+                lightboxCaption.style.display = caption ? 'block' : 'none';
+            }
+            lightbox.classList.add('lightbox--open');
+            lightbox.setAttribute('aria-hidden', 'false');
+        }
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox) {
+            lightbox.classList.remove('lightbox--open');
+            lightbox.setAttribute('aria-hidden', 'true');
+        }
+    }
+
+    function initLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxOverlay = document.querySelector('.lightbox__overlay');
+
+        // Close button
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', closeLightbox);
+        }
+
+        // Click overlay to close
+        if (lightboxOverlay) {
+            lightboxOverlay.addEventListener('click', closeLightbox);
+        }
+
+        // Clickable photos
+        document.querySelectorAll('.story-photo--clickable').forEach(photo => {
+            photo.addEventListener('click', () => {
+                const fullSrc = photo.dataset.full || photo.querySelector('img')?.src;
+                const caption = photo.querySelector('figcaption')?.textContent ||
+                               photo.querySelector('img')?.alt || '';
+                if (fullSrc) {
+                    openLightbox(fullSrc, caption);
+                }
+            });
+        });
+
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox?.classList.contains('lightbox--open')) {
+                closeLightbox();
+            }
+        });
+    }
+
     /**
      * Initialize
      */
@@ -232,8 +296,9 @@
             window.location.reload();
         };
 
-        // Initialize story modal
+        // Initialize story modal and lightbox
         initStoryModal();
+        initLightbox();
     }
 
     // Start when DOM is ready
