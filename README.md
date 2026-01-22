@@ -180,6 +180,38 @@ Thanks, Tim. Thanks, Joe. Thanks to everyone who helped bring my dad's voice bac
 
 ---
 
+## ❄️ Decoding Pop's Voice
+
+Getting the data back was only half the battle.
+
+When I downloaded the files from SalvageData, I found exactly what I expected: 75 files with no extensions, no headers, no documentation. Just raw binary data from the 1980s. These files were created for the **Big Mouth** ISA sound card — a piece of hardware that predated any audio standards we use today. No WAV headers. No sample rate metadata. Nothing.
+
+So I did what anyone would do in 2025: I asked AI for help.
+
+I started with **Claude**, describing the problem and what I knew about the original system. Together, we built an audio tuner app — a web-based tool that could load these mystery files and let me experiment with different decoding parameters. Sample rates. Bit depths. Signed versus unsigned. Mono versus stereo. Every combination imaginable.
+
+For the first hour, all I heard was static. White noise. Garbage.
+
+Then, something changed. Through the noise, I heard something familiar. Faint, buried under hiss and distortion, but unmistakable: *"B... seven..."*
+
+My heart stopped. That was him. That was my dad's voice.
+
+I knew we were close, but something was still wrong. The audio was there, but corrupted — like listening through a broken radio. We tried everything, but hit a wall.
+
+So I took what Claude and I had built and showed it to **ChatGPT**. I explained the whole background, showed the code, described what I was hearing. And ChatGPT spotted what we were missing: **the accumulator**.
+
+The Big Mouth card used **delta encoding** — each byte wasn't an absolute audio sample, it was a *change* from the previous value. To reconstruct the original waveform, you needed to accumulate those deltas. Without the accumulator, we were just playing back the differences, which sounded like noise with hints of voice buried underneath.
+
+Once we added the accumulator logic with the right "leak" factor, everything clicked. The static melted away. And there it was — **Pop's voice**, clear as the day he recorded it in the 1980s.
+
+*"B-7... I-22... N-31..."*
+
+Forty years of technology changes. A dead hard drive. A proprietary format. And two AIs helping me reverse-engineer something my dad built before I was old enough to understand what he was doing.
+
+The audio tuner we built went through seven versions. Each one got us closer. You can still see them in the project files — a digital archaeology of trial and error.
+
+---
+
 ## ❄️ Photo Gallery
 
 ### The Original System

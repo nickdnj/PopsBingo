@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles/main.css?v=13" />
+  <link rel="stylesheet" href="styles/main.css?v=14" />
 </head>
 <body>
   <!-- Snowfall effect -->
@@ -312,6 +312,29 @@
               <p>When I downloaded those files and heard my dad's voice come through the speakers — clear as the day he recorded them — I can't describe what that felt like. Decades of Christmas memories. A voice I thought we might lose forever.</p>
               <p><strong>Pop's voice is safe now.</strong> It lives in this app. It lives in the cloud. It will play on Christmas Eve for as long as our family gathers to play Bingo.</p>
               <p>Thanks, Tim. Thanks, Joe. Thanks to everyone who helped bring my dad's voice back.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Decoding Pop's Voice -->
+        <section class="story-section">
+          <h2 class="story-section__title">Decoding Pop's Voice</h2>
+          <div class="story-section__content">
+            <div class="story-text story-text--full">
+              <p>Getting the data back was only half the battle.</p>
+              <p>When I downloaded the files from SalvageData, I found exactly what I expected: 75 files with no extensions, no headers, no documentation. Just raw binary data from the 1980s. These files were created for the <strong>Big Mouth</strong> ISA sound card — a piece of hardware that predated any audio standards we use today. No WAV headers. No sample rate metadata. Nothing.</p>
+              <p>So I did what anyone would do in 2025: I asked AI for help.</p>
+              <p>I started with <strong>Claude</strong>, describing the problem and what I knew about the original system. Together, we built an audio tuner app — a web-based tool that could load these mystery files and let me experiment with different decoding parameters. Sample rates. Bit depths. Signed versus unsigned. Mono versus stereo. Every combination imaginable.</p>
+              <p>For the first hour, all I heard was static. White noise. Garbage.</p>
+              <p>Then, something changed. Through the noise, I heard something familiar. Faint, buried under hiss and distortion, but unmistakable: <em>"B... seven..."</em></p>
+              <p>My heart stopped. That was him. That was my dad's voice.</p>
+              <p>I knew we were close, but something was still wrong. The audio was there, but corrupted — like listening through a broken radio. We tried everything, but hit a wall.</p>
+              <p>So I took what Claude and I had built and showed it to <strong>ChatGPT</strong>. I explained the whole background, showed the code, described what I was hearing. And ChatGPT spotted what we were missing: <strong>the accumulator</strong>.</p>
+              <p>The Big Mouth card used <strong>delta encoding</strong> — each byte wasn't an absolute audio sample, it was a <em>change</em> from the previous value. To reconstruct the original waveform, you needed to accumulate those deltas. Without the accumulator, we were just playing back the differences, which sounded like noise with hints of voice buried underneath.</p>
+              <p>Once we added the accumulator logic with the right "leak" factor, everything clicked. The static melted away. And there it was — <strong>Pop's voice</strong>, clear as the day he recorded it in the 1980s.</p>
+              <p><em>"B-7... I-22... N-31..."</em></p>
+              <p>Forty years of technology changes. A dead hard drive. A proprietary format. And two AIs helping me reverse-engineer something my dad built before I was old enough to understand what he was doing.</p>
+              <p>The audio tuner we built went through seven versions. Each one got us closer. You can still see them in the project files — a digital archaeology of trial and error.</p>
             </div>
           </div>
         </section>
