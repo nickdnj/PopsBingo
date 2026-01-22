@@ -148,6 +148,38 @@ That's where I got the idea for this app.
 
 ---
 
+## ❄️ Saving Pop's Voice
+
+After Christmas, I brought the Halikan home with me. I had to try.
+
+The machine wouldn't boot. I pressed the power switch dozens of times. Nothing. The last time that old PC had come to life was **December 24th** — Christmas Eve — the first Christmas without my dad. And now it was silent.
+
+So I did what my dad would have done. I took it apart.
+
+I disassembled the Halikan piece by piece, eventually pulling out the hard drive — a tiny 40 MB 3.5-inch IDE drive from the 1980s. I ordered adapters from Amazon. I tried my Mac. I tried my PC. The drive wouldn't mount. It was dead.
+
+I thought about my friend **Tim**. Tim's a handyman and contractor — he did work on my house when we sold it, and later helped make my condo livable. But here's the thing about Tim: while he runs his family contracting business, he's also a Vice President at a data storage company. The guy who fixes your kitchen sink also knows enterprise storage systems.
+
+I texted him: *"Hey Tim, I have a non-home improvement question. I have a 1980s 3.5 inch IDE hard drive that was running on an MS-DOS machine. I need to get the data off this disk."*
+
+Tim's response: *"I started my journey with computers back in 1980 with MS-DOS. Let me come get it from you."*
+
+He picked up the drive that night. He tried his equipment — needed a PATA interface adapter. When that didn't work either, he connected me with **Joe** at a professional data recovery company called **SalvageData** in Cleveland.
+
+I explained to Joe what was on that drive: *"My father wrote a couple of programs with voice files — one for bingo and the other called QTS. I'd like to try to get that software and the sound files."*
+
+Tim shipped the drive to Cleveland. A few days later: **"Good news! The evaluation is completed and we are able to recover your data!"**
+
+They salvaged everything. All 75 of Pop's voice recordings. The Bingo program. The QTS system. Everything my dad built, preserved.
+
+When I downloaded those files and heard my dad's voice come through the speakers — clear as the day he recorded them — I can't describe what that felt like. Decades of Christmas memories. A voice I thought we might lose forever.
+
+**Pop's voice is safe now.** It lives in this app. It lives in the cloud. It will play on Christmas Eve for as long as our family gathers to play Bingo.
+
+Thanks, Tim. Thanks, Joe. Thanks to everyone who helped bring my dad's voice back.
+
+---
+
 ## ❄️ Photo Gallery
 
 ### The Original System
