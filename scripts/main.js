@@ -15,7 +15,8 @@ const BINGO_COLUMNS = {
 // DOM Elements
 const elements = {
   // Buttons
-  callBtn: document.getElementById('callBtn'),
+  nextBtn: document.getElementById('nextBtn'),
+  repeatBtn: document.getElementById('repeatBtn'),
   resetBtn: document.getElementById('resetBtn'),
   
   // Stats
@@ -492,20 +493,23 @@ function callNextNumber() {
     playSound('bingo');
     return;
   }
-  
+
   const number = callOrder.pop();
   calledNumbers.push(number);
-  
+
   updateStats();
   updateBoard(number);
   updateCurrentCall(number);
   updateHistory();
   updateMiniCard(number);
-  
+
+  // Enable repeat button now that we have a number
+  elements.repeatBtn.disabled = false;
+
   const letter = getLetterForNumber(number);
   showStatus(`🔔 ${letter}-${number}!`, 2000);
   playSound('call', number);
-  
+
   // Check if all numbers called
   if (callOrder.length === 0) {
     setTimeout(() => {
@@ -515,10 +519,25 @@ function callNextNumber() {
   }
 }
 
+// Repeat the current number
+function repeatCurrentNumber() {
+  if (calledNumbers.length === 0) {
+    showStatus('No number to repeat yet!', 2000);
+    return;
+  }
+
+  const number = calledNumbers[calledNumbers.length - 1];
+  const letter = getLetterForNumber(number);
+  showStatus(`🔁 ${letter}-${number}!`, 2000);
+  playSound('call', number);
+}
+
 // Reset the game
 function resetSession() {
   buildCallOrder();
   generateMiniCard();
+  // Disable repeat button since no number has been called yet
+  elements.repeatBtn.disabled = true;
   showStatus('🎄 New game started! Let\'s play Bingo!');
 }
 
@@ -546,11 +565,18 @@ function isStoryModalOpen() {
 // Wire up event listeners
 function wireEvents() {
   // Wrap button handlers to unlock audio on first interaction (iOS)
-  elements.callBtn.addEventListener('click', async () => {
+  // Next button advances to the next number
+  elements.nextBtn.addEventListener('click', async () => {
     await unlockAudio();
     callNextNumber();
   });
-  
+
+  // Repeat button replays the current number
+  elements.repeatBtn.addEventListener('click', async () => {
+    await unlockAudio();
+    repeatCurrentNumber();
+  });
+
   elements.resetBtn.addEventListener('click', async () => {
     await unlockAudio();
     resetSession();
@@ -591,8 +617,14 @@ function wireEvents() {
     
     // Don't process game shortcuts if modal is open
     if (isStoryModalOpen()) return;
-    
-    if (e.code === 'Space' && !e.repeat) {
+
+    // Spacebar or Left Arrow = Repeat current number
+    if ((e.code === 'Space' || e.code === 'ArrowLeft') && !e.repeat) {
+      e.preventDefault();
+      unlockAudio().then(() => repeatCurrentNumber());
+    }
+    // Enter, N, or Right Arrow = Next number
+    if ((e.code === 'Enter' || e.code === 'KeyN' || e.code === 'ArrowRight') && !e.repeat) {
       e.preventDefault();
       unlockAudio().then(() => callNextNumber());
     }

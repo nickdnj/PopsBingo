@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles/main.css?v=11" />
+  <link rel="stylesheet" href="styles/main.css?v=12" />
 </head>
 <body>
   <!-- Snowfall effect -->
@@ -52,20 +52,18 @@
 
       <!-- Action Buttons -->
       <div class="actions">
-        <button id="callBtn" class="btn btn--primary">
+        <button id="nextBtn" class="btn btn--primary">
           <span class="btn__icon">🎅</span>
-          <span class="btn__text">Call Number</span>
+          <span class="btn__text">Next Number</span>
+        </button>
+        <button id="repeatBtn" class="btn btn--repeat" disabled>
+          <span class="btn__icon">🔁</span>
+          <span class="btn__text">Repeat</span>
         </button>
         <button id="resetBtn" class="btn btn--secondary">
           <span class="btn__icon">🔄</span>
           <span class="btn__text">New Game</span>
         </button>
-      </div>
-
-      <!-- Voice Status -->
-      <div class="voice-status" id="voiceStatus">
-        <span class="voice-status__icon">🎙️</span>
-        <span class="voice-status__text">Loading voice...</span>
       </div>
 
       <!-- Remaining Count -->
@@ -345,6 +343,6 @@
   </div>
 
   <audio id="bingoSound" preload="auto"></audio>
-  <script src="scripts/main.js"></script>
+  <script src="scripts/main.js?v=4"></script>
 </body>
 </html>
