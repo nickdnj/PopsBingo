@@ -1601,3 +1601,70 @@ body {
   text-align: center;
   max-width: 600px;
 }
+
+/* ========================================
+   Story Audio Clips (QTS tail numbers)
+   ======================================== */
+.story-audio-clips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.story-audio-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 215, 0, 0.05));
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-sm);
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.story-audio-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.25), rgba(255, 215, 0, 0.15));
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+}
+
+.story-audio-btn:active {
+  transform: translateY(0);
+}
+
+.story-audio-btn.playing {
+  background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+  color: #1a1a1a;
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.story-audio-btn.playing .story-audio-icon {
+  animation: pulse-icon 0.5s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.story-audio-icon {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.story-audio-label {
+  font-family: "SF Mono", Monaco, monospace;
+  letter-spacing: 0.5px;
+}

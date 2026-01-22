@@ -543,6 +543,73 @@ function resetSession() {
 
 
 // ========================================
+// Story Audio Clips (QTS tail numbers)
+// ========================================
+
+// Cache for story audio files
+const storyAudioCache = new Map();
+let currentStoryAudio = null;
+
+// Play QTS audio clips in the story modal
+async function playStoryAudio(filename) {
+  // Ensure audio is unlocked on iOS
+  await unlockAudio();
+
+  const audioPath = `audio/${filename}.wav`;
+
+  // Stop any currently playing story audio
+  if (currentStoryAudio) {
+    currentStoryAudio.pause();
+    currentStoryAudio.currentTime = 0;
+    // Remove playing class from all buttons
+    document.querySelectorAll('.story-audio-btn.playing').forEach(btn => {
+      btn.classList.remove('playing');
+    });
+  }
+
+  // Find the button that was clicked
+  const clickedBtn = document.querySelector(`.story-audio-btn[onclick*="${filename}"]`);
+
+  try {
+    let audio = storyAudioCache.get(filename);
+
+    if (!audio) {
+      // Fetch and cache the audio file (works better on iOS)
+      const response = await fetch(audioPath);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const blob = await response.blob();
+      const blobUrl = URL.createObjectURL(blob);
+      audio = new Audio(blobUrl);
+      audio.preload = 'auto';
+      storyAudioCache.set(filename, audio);
+    }
+
+    // Set up ended handler to remove playing class
+    audio.onended = () => {
+      if (clickedBtn) clickedBtn.classList.remove('playing');
+      currentStoryAudio = null;
+    };
+
+    // Add playing class and play
+    if (clickedBtn) clickedBtn.classList.add('playing');
+    currentStoryAudio = audio;
+    audio.currentTime = 0;
+    await audio.play();
+
+  } catch (err) {
+    console.error(`Failed to play story audio ${filename}:`, err);
+    if (clickedBtn) clickedBtn.classList.remove('playing');
+    // Play a fallback beep to indicate something happened
+    playFallbackSound('call');
+  }
+}
+
+// Make playStoryAudio available globally for onclick handlers
+window.playStoryAudio = playStoryAudio;
+
+// ========================================
 // Story Modal (Easter Egg)
 // ========================================
 

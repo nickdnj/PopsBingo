@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="styles/main.css?v=12" />
+  <link rel="stylesheet" href="styles/main.css?v=13" />
 </head>
 <body>
   <!-- Snowfall effect -->
@@ -210,8 +210,29 @@
           <div class="story-section__content">
             <div class="story-text story-text--full">
               <p>I grew up hearing him develop it. Over and over, I'd hear his voice echoing through the house:</p>
-              <p class="story-quote"><em>"Sierra Foxtrot..."<br/>"November Three Four Seven..."<br/>"Cessna One Seven Two..."</em></p>
-              <p>The military phonetic alphabet. Tail numbers. Scheduling prompts. Recorded again and again until they were perfect.</p>
+              <div class="story-audio-clips">
+                <button class="story-audio-btn" onclick="playStoryAudio('N739SF')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N739SF</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N734LH')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N734LH</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N704VB')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N704VB</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N5928E')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N5928E</span>
+                </button>
+                <button class="story-audio-btn" onclick="playStoryAudio('N46366')">
+                  <span class="story-audio-icon">&#9658;</span>
+                  <span class="story-audio-label">N46366</span>
+                </button>
+              </div>
+              <p>Tail numbers. Scheduling prompts. Recorded again and again until they were perfect.</p>
               <p>At the time, honestly? It was kind of annoying. Hearing the same phrases repeated endlessly while he got the recordings just right.</p>
               <p>But now that he's gone, those memories are precious. That voice — patient, deliberate, unmistakably his — is something I'll never forget.</p>
               <p><strong>The same voice that once called airplane tail numbers would later call Bingo numbers.</strong></p>
@@ -366,6 +387,6 @@
   </div>
 
   <audio id="bingoSound" preload="auto"></audio>
-  <script src="scripts/main.js?v=4"></script>
+  <script src="scripts/main.js?v=5"></script>
 </body>
 </html>
