@@ -158,7 +158,7 @@ So I did what my dad would have done. I took it apart.
 
 I disassembled the Halikan piece by piece, eventually pulling out the hard drive — a tiny 40 MB 3.5-inch IDE drive from the 1980s. I ordered adapters from Amazon. I tried my Mac. I tried my PC. The drive wouldn't mount. It was dead.
 
-I thought about my friend **Tim**. Tim's a handyman and contractor — he did work on my house when we sold it, and later helped make my condo livable. But here's the thing about Tim: while he runs his family contracting business, he's also a Vice President at a data storage company. The guy who fixes your kitchen sink also knows enterprise storage systems.
+I thought about my friend **Tim**. Tim's a contractor — the kind of guy who can demo a closet, install a pantry, renovate a kitchen. He did work on my house when we sold it, and later helped make my condo livable. But here's the thing about Tim: while he runs his family contracting business, he's also a Vice President at a data storage company. The guy who can gut your bathroom also knows enterprise storage systems.
 
 I texted him: *"Hey Tim, I have a non-home improvement question. I have a 1980s 3.5 inch IDE hard drive that was running on an MS-DOS machine. I need to get the data off this disk."*
 
