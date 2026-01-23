@@ -1,14 +1,16 @@
 # 🎄 Pop's Bingo — A Family Story
 
-> *A love letter to family, tradition, and a voice that will always call the next number.*
+> *A story of tradition and a voice that will always call the next number.*
+>
+> by Nick DeMarco
 
 ---
 
 ## ❄️ A Long Island Christmas
 
-My name is **Nick DeMarco**. I grew up in Long Island, New York, raised by an Italian father and a mother whose Irish roots ran deep through my grandmother, **Nana**.
+I grew up in Long Island, New York, raised by an Italian father and an Irish mother whose roots ran deep through my grandmother, **Nana**.
 
-Like many families of that era, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. There was always chicken or lasagna for family that didn't like fish. It was never about perfection. It was about being together.
+Like many families of that era and still today, heritage was everything during the holidays. Christmas Eve meant honoring tradition — the Italian way. We'd attempt the classic *Feast of the Seven Fishes*, though we adapted it to suit our tastes: **scungilli, calamari, shrimp**, and whatever else we loved. There was always chicken parmesan or lasagna for family members who didn't like fish. It was never about perfection. It was about being together.
 
 **Nana** would come stay with us around the holidays. Sometimes she lived with us for stretches of time. **Auntie** too. The house would fill with voices — laughing, arguing, storytelling. We were an emotional family, Italian and Irish blood running hot. There were good times and hard times, but what I remember most is the warmth.
 
@@ -18,11 +20,9 @@ And every Christmas Eve, after the food was cleared and the table was set fresh,
 
 ## ❄️ Nana Mae — Where It All Began
 
-That Christmas Eve Bingo tradition? It all started with **Nana**.
+That Christmas Eve Bingo tradition? It all started with my **Nana** — my mother's mother. Years later, when the great-grandkids came along and my mom became "Nana" to them, we started calling her **Nana Mae** to tell them apart. But to me, she was always just Nana.
 
 ![Nana Mae](photos/nana-mae.jpg)
-
-She was my Nana — my mother's mother. Years later, when the great-grandkids came along and my mom became "Nana" to them, we started calling her **Nana Mae** to tell them apart. But to me, she was always just Nana.
 
 Nana was Irish and proud of it. She loved her heritage fiercely. But nothing — *nothing* — compared to how much she loved Bingo.
 
@@ -30,9 +30,7 @@ Nana didn't just enjoy Bingo. She *lived* for it. Bingo was joy, anticipation, c
 
 She also taught me how to argue. How to debate. How to hold my ground. I think of her often, and I miss her deeply. She passed around 1996, but her spirit lives on in every game we play.
 
-Cathie likes Bingo too — but no one loved it like Nana.
-
-That love planted a seed.
+Cathie likes Bingo too — but no one loved it like Nana. That love planted a seed.
 
 ---
 
@@ -42,13 +40,23 @@ None of this would have happened without **Mom**.
 
 ![Mom Marge with grandchildren](photos/mom.jpg)
 
-My mother, **Marge**, was the director behind the scenes for decades. Every Christmas, she'd go out and buy a collection of small, thoughtful, fun prizes. She'd set the table, organize the games, gather the family together.
+My mother, **Marge**, was the director behind the scenes for decades. Every Christmas, she'd go out and buy a collection of small, thoughtful, fun prizes for the Bingo winners to choose from. She'd set the table, organize the games, gather the family together.
 
 Pop built the technology. But Mom built the moment.
 
 She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.
 
-Now at 86, she's slowed down a bit — and has graciously passed the torch. My sister **Peggy**, my sister-in-law **Eileen**, and my wife **Cathie** have stepped up. Their families are picking up the mantle. Peggy's son **Kevin** lives in upstate New York. My brother's kids — **Nicky**, **Ashley**, and **Joey** — still live near home and gather for Christmas Eve.
+Now at 87, Mom isn't one to easily step aside — and honestly, why would she? This was her tradition to nurture, her family to gather. But as the years have passed, my sister **Peggy**, my sister-in-law **Eileen**, and my wife **Cathie** have gently stepped up alongside her, making sure the tradition continues even as the family grows and spreads.
+
+---
+
+## ❄️ The Tradition Spreads
+
+As with all growing families, the holiday dynamic changes each year. Peggy's son **Kevin** now lives in upstate New York. My brother **Bud's** kids — **Nicky**, **Ashley**, and **Joey** — still live near home and gather for Christmas Eve.
+
+In 2023, Mom, Dad, Cathie, and I drove up to Kevin's house in Glens Falls, NY with Peggy — and we played Bingo. Meanwhile, Bud's family gathered back home for their own Christmas Eve, likely with their own game of Bingo going.
+
+What started as one family around one table has become multiple families, multiple gatherings, multiple games — all connected by the same tradition Nana Mae started decades ago.
 
 And the circle keeps growing. My nieces and nephews, their spouses and significant others — they're not just winning prizes now, they're buying them too. Everyone's part of the tradition. Everyone's part of the process.
 
@@ -56,7 +64,7 @@ And the circle keeps growing. My nieces and nephews, their spouses and significa
 
 ## ❄️ Growing Up with Pop's Voice
 
-My dad, **Nick DeMarco**, was a successful business owner who worked relentlessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.
+My dad, **Nick DeMarco**, was a successful business owner who worked tirelessly to provide for his family. But he wasn't just a businessman — he was a problem-solver, a builder, and someone who loved learning new things.
 
 ![Pop](photos/pop-portrait.jpg)
 
@@ -66,15 +74,13 @@ Through his friend **Frank**, who worked at Grumman, my dad joined a private pil
 
 My dad saw the problem. And he fixed it.
 
-Using a piece of ISA hardware called **Big Mouth** — a voice playback board — along with MS-DOS and his own programming skills, he built a **telephone-based aircraft scheduling system**. Members could call in, listen to spoken prompts, and reserve aircraft without ever leaving home.
-
-He called it the **QTS Scheduling System**.
+Using a piece of hardware called **Big Mouth** — a voice telephony board — along with MS-DOS and his own programming skills, he built a **telephone-based aircraft scheduling system**. Members could call in, listen to spoken prompts, and reserve an aircraft without ever leaving home. He called it the **QTS System**.
 
 I grew up hearing him develop it. Over and over, I'd hear his voice echoing through the house:
 
-*"Sierra Foxtrot..."*  
-*"November Three Four Seven..."*  
-*"Cessna One Seven Two..."*
+*"Nine Sierra Foxtrot..."*
+*"Four Lima Hotel..."*
+*"Four Victor Bravo..."*
 
 The military phonetic alphabet. Tail numbers. Scheduling prompts. Recorded again and again until they were perfect.
 
@@ -82,37 +88,27 @@ At the time, honestly? It was kind of annoying. Hearing the same phrases repeate
 
 But now that he's gone, those memories are precious. That voice — patient, deliberate, unmistakably his — is something I'll never forget.
 
+The QTS system was deployed at GACE, and members loved it. So much so that he went on to sell copies to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was. *This was interactive voice technology, built by hand, years before it was commonplace.*
+
 The same voice that once called airplane tail numbers would later call Bingo numbers.
-
----
-
-## ❄️ QTS: Technology Ahead of Its Time
-
-This was the mid-1980s. Personal computers were primitive. There was no internet. No mobile phones. No cloud.
-
-But my dad built something remarkable.
-
-The QTS system was deployed at GACE, and members loved it. So much so that he went on to sell copies to other flying clubs. His work was even written up in a private pilots' magazine — a proud moment that reflected how far ahead of the curve he truly was.
-
-*This was interactive voice technology, built by hand, years before it was commonplace.*
 
 ---
 
 ## ❄️ From Airplanes to Bingo
 
-Every Christmas, the family gathered. Mom bought the prizes. The table was set. And then came the question:
+Every Christmas, the family gathered. Mom bought the Bingo prizes. The table was set. And then came the question:
 
 **Why not build a Bingo caller?**
 
-![The Halikan Luggable PC](pops_bingo_brief/halikan_luggable.jpeg)
+![The Luggable PC](pops_bingo_brief/halikan_luggable.jpeg)
 
-*The Halikan "luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
+*The "Luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
 
-If Pop could build a telephone scheduling system using his own recorded voice, he could certainly build a Bingo caller.
+If Pop could build a telephone scheduling system using his own recorded voice, he could certainly create a Bingo caller.
 
 So he did.
 
-Using the same core ideas behind QTS, my dad built a **Bingo Calling Application**. He recorded his own voice calling *every single Bingo number*. Each call was stored individually, mapped perfectly, and played back by the computer.
+Using the same core ideas behind QTS, my dad built a **Bingo calling application**. He recorded his own voice calling *every single Bingo number*. Each call was stored individually, mapped perfectly, and played back by the computer.
 
 When Bingo started, it wasn't a generic voice. It was **Pop**. Calling every number.
 
@@ -122,21 +118,13 @@ When Bingo started, it wasn't a generic voice. It was **Pop**. Calling every num
 
 The grandkids loved it.
 
-They couldn't get enough of hearing Pop's voice calling the numbers. That voice — warm, familiar, unmistakably his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.
+They couldn't get enough of hearing Pop's voice calling the numbers. That voice — warm, familiar, distinctly his — filled the room every Christmas. It brought smiles, laughter, and a deep sense of connection.
 
 Bingo became more than a game. It became a way for the family to come together. A way to remember. A way for Pop to still be there with us.
 
 Then came **Christmas 2025** — the first without my dad. He passed away earlier that year.
 
-My brother hosted Christmas Eve. He had the old Halikan — the computer my dad developed QTS and the Bingo game on — and he powered it up. He said it worked great.
-
-I got there a few hours later. I tried powering it up. It wouldn't start. A little panic set in.
-
-After turning the switch on and off a few dozen times... and then a few more dozen times... the screen finally woke up and the machine booted. Relief.
-
-Then we had to move it to another room. We unplugged it. The on-and-off switching started again. Eventually it booted. But then — of course — we had to move it *one more time*.
-
-Finally, we got it set up in its spot. It booted. And we played Bingo.
+My brother hosted Christmas Eve. He had the old Luggable — the 400-pound computer my dad developed QTS and the Bingo game on. After some coaxing, we got it to boot. And we played Bingo.
 
 It was a great session. Everyone was laughing, having a wonderful time, hearing Pop's voice call out the numbers — like he was right there with us.
 
@@ -150,65 +138,33 @@ That's where I got the idea for this app.
 
 ## ❄️ Saving Pop's Voice
 
-After Christmas, I brought the Halikan home with me. I had to try.
+After Christmas, I brought the Luggable home with me. I had to try to save Pop's voice.
 
 The machine wouldn't boot. I pressed the power switch dozens of times. Nothing. The last time that old PC had come to life was **December 24th** — Christmas Eve — the first Christmas without my dad. And now it was silent.
 
 So I did what my dad would have done. I took it apart.
 
-I disassembled the Halikan piece by piece, eventually pulling out the hard drive — a tiny 40 MB 3.5-inch IDE drive from the 1980s. I ordered adapters from Amazon. I tried my Mac. I tried my PC. The drive wouldn't mount. It was dead.
+I pulled out the hard drive — a tiny 40 MB drive from the 1980s. It wouldn't mount on any modern computer. It was dead.
 
-I thought about my friend **Tim**. Tim's a contractor — the kind of guy who can demo a closet, install a pantry, renovate a kitchen. He did work on my house when we sold it, and later helped make my condo livable. But here's the thing about Tim: while he runs his family contracting business, he's also a Vice President at a data storage company. The guy who can gut your bathroom also knows enterprise storage systems.
-
-I texted him: *"Hey Tim, I have a non-home improvement question. I have a 1980s 3.5 inch IDE hard drive that was running on an MS-DOS machine. I need to get the data off this disk."*
-
-Tim's response: *"I started my journey with computers back in 1980 with MS-DOS. Let me come get it from you."*
-
-He picked up the drive that night. He tried his equipment — needed a PATA interface adapter. When that didn't work either, he connected me with **Joe** at a professional data recovery company called **SalvageData** in Cleveland.
-
-I explained to Joe what was on that drive: *"My father wrote a couple of programs with voice files — one for bingo and the other called QTS. I'd like to try to get that software and the sound files."*
-
-Tim shipped the drive to Cleveland. A few days later: **"Good news! The evaluation is completed and we are able to recover your data!"**
+Through a friend who works in data storage, I connected with a professional data recovery company. A few days later: **"Good news! We are able to recover your data!"**
 
 They salvaged everything. All 75 of Pop's voice recordings. The Bingo program. The QTS system. Everything my dad built, preserved.
 
-When I downloaded those files and heard my dad's voice come through the speakers — clear as the day he recorded them — I can't describe what that felt like. Decades of Christmas memories. A voice I thought we might lose forever.
+But recovering the files was only half the battle. The audio was raw binary data from the 1980s — no headers, no documentation, created for hardware that predated modern audio standards. With the help of AI tools, I built a decoder to experiment with different parameters. For the first hour, all I heard was static.
 
-**Pop's voice is safe now.** It lives in this app. It lives in the cloud. It will play on Christmas Eve for as long as our family gathers to play Bingo.
+Then, through the noise, I heard something familiar. Faint, buried under hiss and distortion, but unmistakable:
 
-Thanks, Tim. Thanks, Joe. Thanks to everyone who helped bring my dad's voice back.
-
----
-
-## ❄️ Decoding Pop's Voice
-
-Getting the data back was only half the battle.
-
-When I downloaded the files from SalvageData, I found exactly what I expected: 75 files with no extensions, no headers, no documentation. Just raw binary data from the 1980s. These files were created for the **Big Mouth** ISA sound card — a piece of hardware that predated any audio standards we use today. No WAV headers. No sample rate metadata. Nothing.
-
-So I did what anyone would do in 2025: I asked AI for help.
-
-I started with **Claude**, describing the problem and what I knew about the original system. Together, we built an audio tuner app — a web-based tool that could load these mystery files and let me experiment with different decoding parameters. Sample rates. Bit depths. Signed versus unsigned. Mono versus stereo. Every combination imaginable.
-
-For the first hour, all I heard was static. White noise. Garbage.
-
-Then, something changed. Through the noise, I heard something familiar. Faint, buried under hiss and distortion, but unmistakable: *"B... seven..."*
+> *"B... seven..."*
 
 My heart stopped. That was him. That was my dad's voice.
 
-I knew we were close, but something was still wrong. The audio was there, but corrupted — like listening through a broken radio. We tried everything, but hit a wall.
-
-So I took what Claude and I had built and showed it to **ChatGPT**. I explained the whole background, showed the code, described what I was hearing. And ChatGPT spotted what we were missing: **the accumulator**.
-
-The Big Mouth card used **delta encoding** — each byte wasn't an absolute audio sample, it was a *change* from the previous value. To reconstruct the original waveform, you needed to accumulate those deltas. Without the accumulator, we were just playing back the differences, which sounded like noise with hints of voice buried underneath.
-
-Once we added the accumulator logic with the right "leak" factor, everything clicked. The static melted away. And there it was — **Pop's voice**, clear as the day he recorded it in the 1980s.
+After more experimentation, everything clicked. The static melted away. And there it was — **Pop's voice**, clear as the day he recorded it in the 1980s.
 
 *"B-7... I-22... N-31..."*
 
-Forty years of technology changes. A dead hard drive. A proprietary format. And two AIs helping me reverse-engineer something my dad built before I was old enough to understand what he was doing.
+Forty years of technology changes. A dead hard drive. A proprietary format. And my dad's voice, brought back to life.
 
-The audio tuner we built went through seven versions. Each one got us closer. You can still see them in the project files — a digital archaeology of trial and error.
+**Pop's voice is safe now.** It lives in this app. It lives in the cloud. It will play on Christmas Eve for as long as our family gathers to play Bingo.
 
 ---
 
@@ -226,13 +182,13 @@ The audio tuner we built went through seven versions. Each one got us closer. Yo
 
 I learned a lot from my dad. I'm a lot like him.
 
-When I see a problem, I want to fix it. That's what he did. That's what he taught me — not with words, but by example. He saw a problem with airplane scheduling, and he fixed it. He saw a way to make Christmas Bingo better, and he built it.
+When I see a problem, I want to fix it. That's what he did. That's what he taught me — not with words, but by example. He saw a problem with airplane scheduling, and he built QTS. He saw a way to make Christmas Bingo better, and he created this tradition.
 
-When that old Halikan struggled to power on Christmas 2025, I saw a problem too. This machine isn't going to last forever. And if it dies, we lose his voice. We lose this piece of him.
+When that old Luggable struggled to power up on Christmas 2025, I saw a problem too. This machine isn't going to last forever. And if it dies, we lose his voice. We lose this piece of him.
 
-But I could fix it. So I did.
+But I could do something about it. So I did.
 
-This app exists to be a **vessel** — to hold my dad's voice and my dad's memory. A small part of his legacy. And in a way, building it is how I honor him. By being like him. By seeing a problem and fixing it.
+This app exists to be a **vessel** — to hold my dad's voice and my dad's memory. A small part of his legacy. And in a way, building it is how I honor him. By carrying forward what he started.
 
 And on Christmas Eve, that voice will still be there. Calling the numbers. For as long as we're playing Bingo. For as long as we're using this app. For as long as we gather as a family.
 
@@ -242,61 +198,7 @@ And on Christmas Eve, that voice will still be there. Calling the numbers. For a
 
 ---
 
-## 🛠️ How This Was Built — 100% Vibe Coded
-
-This entire app was built through conversation. No traditional coding. Just me talking to **Claude Opus 4.5** inside **Cursor**, describing what I wanted, and watching it come to life.
-
-### The Journey
-
-It started with a simple question: *"I have my dad's old DOS Bingo app with voice files. How do I preserve this?"*
-
-From there, we talked through everything:
-
-- **Data extraction planning** — We discussed how to pull files from an old IDE/PATA hard drive, what audio formats to expect, sample rates, bit depths, and how to convert raw PCM to WAV.
-
-- **Placeholder voices** — While I waited for the hardware to extract Pop's actual voice files, Claude generated a shell script that used macOS text-to-speech to create 75 placeholder audio files. The app worked immediately.
-
-- **The web app itself** — HTML, CSS, JavaScript — all generated through conversation. I'd describe what I wanted: *"Make the calling numbers bigger so they're visible from the back of the room on a TV."* And it happened. We went through multiple iterations using `clamp()` and viewport units until the layout was perfect.
-
-- **The Easter Egg story** — I wanted to tell the family history. So I just... talked. I told Claude about Nana Mae, about Mom Marge, about how Pop built QTS for the flying club, about Christmas Eve traditions. Claude turned my rambling voice messages into the story you see when you click the logo.
-
-- **Firebase deployment** — I said *"deploy this to the cloud so I can share it with family."* Claude walked me through Firebase Hosting setup, created the config files, and deployed it. Live in minutes.
-
-- **iOS audio fix** — The app worked great on desktop, but audio wouldn't play on iPhone. Classic iOS Safari restrictions. Claude diagnosed the issue (audio needs user gesture to unlock), rewrote the audio loading to use `fetch()` + blob URLs, and added an unlock mechanism. Fixed.
-
-- **The echo bug** — First tap on iPhone made crazy loud echoing sounds. Turned out the "unlock" code was playing all 75 audio files simultaneously for a split second. Claude found it, removed the offending loop, deployed the fix. Clean.
-
-- **QR code for mobile cards** — I wanted family members to scan a QR code and get a bingo card on their phone. Claude created `card.html` with random card generation, tap-to-mark functionality, and festive styling. The buttons went through a few iterations until they were just right.
-
-- **Every story update** — Each time I remembered a detail — *"Actually, we called Aunt Eileen 'Auntie'"* or *"My mom is still alive, she's 86!"* or *"Add the part about Christmas 2025 when the machine almost didn't boot"* — I'd just say it, and Claude would update both the app and the README.
-
-### What "Vibe Coding" Feels Like
-
-I'm not a frontend developer. I can read code, I understand systems, but I don't write CSS for fun. This project would have taken me weeks to build traditionally — or more likely, I would have given up.
-
-Instead, I had a conversation. I described the *feeling* I wanted. I said things like:
-
-- *"Make this feel more connected"*
-- *"The fonts need to balance with the calling field"*
-- *"Make the thank-you section come from my perspective — Dad, Mom, Nana"*
-
-And Claude understood. Not just the technical requirements, but the *intent*. The emotional weight. The family context.
-
-### The Result
-
-In a few days of conversation — not continuous work, just talking when I had time — I went from a dying DOS machine to a modern web app that:
-
-- Runs on any device
-- Preserves my dad's voice forever
-- Tells our family story
-- Can be shared with a simple link
-- Will work for generations
-
-This README, the app, the story modal, the mobile card page, the deployment — all of it came from this chat.
-
-**100% vibe coded. Zero traditional development.**
-
-And honestly? It's fucking awesome.
+*With love — for Nana, for Mom, for Dad, and for all the generations who gather around the table every Christmas.* 🎄
 
 ---
 
@@ -333,17 +235,12 @@ Click on the **Pop's Christmas Bingo** logo to read the full family story.
 The app automatically loads voice files from the `audio/` folder on startup.
 
 ### Current Setup
-The repository includes placeholder audio files generated with macOS text-to-speech. These work for testing, but the real magic is Pop's voice.
+The repository includes Pop's original voice files, restored from the 1980s hard drive.
 
-### Adding Pop's Original Voice
-Once we extract the files from the Halikan:
-
-1. Convert the raw PCM files to `.wav` format
-2. Name them: `B1.wav`, `B2.wav`, ... `O75.wav`
-3. Replace the files in the `audio/` folder
-4. Refresh the page
-
-The voice status indicator will show **"Pop's Voice Ready!"** when all 75 files are loaded.
+### Voice File Format
+- WAV format, named: `B1.wav`, `B2.wav`, ... `O75.wav`
+- Original files were 8-bit unsigned PCM, mono, 11.025 kHz
+- Converted using delta-decoding to reconstruct the original waveform
 
 ---
 
@@ -359,16 +256,47 @@ The voice status indicator will show **"Pop's Voice Ready!"** when all 75 files 
 | O | 61–75 |
 
 ### Original Audio Format
-Pop's files are likely:
-- Raw PCM, 8-bit unsigned
-- Mono, 11.025 kHz sample rate
-- No headers (hence no file extensions)
+Pop's files were:
+- Raw PCM with delta encoding
+- 8-bit unsigned, mono, 11.025 kHz sample rate
+- No headers (created for Big Mouth ISA sound card)
 
-To convert with SoX:
+The files required delta-decoding with an accumulator to reconstruct the original waveform.
+
+---
+
+## Technical Deep Dive (For the Curious)
+
+### Data Recovery Journey
+
+The full technical story of recovering Pop's voice:
+
+1. **Hard Drive Extraction**: Pulled a 40 MB 3.5-inch IDE drive from the 1980s Luggable
+2. **Professional Recovery**: SalvageData in Cleveland recovered all files from the dead drive
+3. **File Analysis**: 75 files with no extensions, no headers — raw binary data
+4. **Audio Reverse-Engineering**: Built multiple iterations of an audio tuner app
+5. **The Breakthrough**: Discovered the Big Mouth card used delta encoding
+6. **Accumulator Logic**: Each byte was a *change* from the previous value, requiring accumulation
+7. **Final Conversion**: With the right "leak" factor, Pop's voice emerged crystal clear
+
+### The Audio Tuner Iterations
+
+We went through seven versions of the audio tuner, experimenting with:
+- Sample rates (8000 Hz to 22050 Hz)
+- Bit depths (8-bit vs 16-bit)
+- Signed vs unsigned PCM
+- Mono vs stereo interpretation
+- Delta encoding with various accumulator configurations
+
+The key insight came from understanding the Big Mouth ISA card's proprietary format — it used delta encoding where each byte represented the *change* from the previous sample, not the absolute value.
+
+### SoX Conversion (Reference)
+
+For converting raw PCM files with known parameters:
 ```bash
 sox -r 11025 -c 1 -b 8 -e unsigned-integer B12 B12.wav
 ```
 
 ---
 
-*With love — for Nana, for Mom, for Dad, and for all the generations who gather around the table every Christmas.* 🎄
+*Built with love, preserved forever.* 🎄
