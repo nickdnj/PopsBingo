@@ -28,7 +28,7 @@ Nana was Irish and proud of it. She loved her heritage fiercely. But nothing —
 
 Nana didn't just enjoy Bingo. She *lived* for it. Bingo was joy, anticipation, community, and ritual all rolled into one. When my wife **Cathie** and I would visit her in Orlando, one of the highlights was taking her to a local bingo hall. Sitting beside her, watching her light up as the numbers were called, you could feel how something as simple as Bingo brought people together.
 
-She also taught me how to argue. How to debate. How to hold my ground. I think of her often, and I miss her deeply. She passed around 1996, but her spirit lives on in every game we play.
+She also taught me how to argue. How to debate. How to hold my ground. I think of her often, and I miss her deeply. She passed around 1995, but her spirit lives on in every game we play.
 
 Cathie likes Bingo too — but no one loved it like Nana. That love planted a seed.
 
