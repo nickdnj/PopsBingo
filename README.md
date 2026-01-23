@@ -102,7 +102,7 @@ Every Christmas, the family gathered. Mom bought the Bingo prizes. The table was
 
 ![The Luggable PC](pops_bingo_brief/halikan_luggable.jpeg)
 
-*The "Luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in CRT, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
+*The "Luggable" IBM-PC compatible that has run Pop's Bingo for over three decades. Built-in LCD, mechanical keyboard, and an ISA sound card that brought Pop's voice to life.*
 
 If Pop could build a telephone scheduling system using his own recorded voice, he could certainly create a Bingo caller.
 
