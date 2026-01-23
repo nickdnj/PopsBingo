@@ -46,7 +46,7 @@ Pop built the technology. But Mom built the moment.
 
 She was the unsung hero of every Christmas gathering. The one who turned chaos into tradition. The one who made sure everyone felt welcome, fed, and loved. Without her, the Bingo games — and so much else — would never have come together.
 
-Now at 87, Mom isn't one to easily step aside — and honestly, why would she? This was her tradition to nurture, her family to gather. But as the years have passed, my sister **Peggy**, my sister-in-law **Eileen**, and my wife **Cathie** have gently stepped up alongside her, making sure the tradition continues even as the family grows and spreads.
+Now at 87, Mom isn't one to easily step aside — and honestly, why would she? This was her tradition to nurture, her family to gather. But as the years have passed, my sister-in-law **Eileen**, my sister **Peggy**, and my wife **Cathie** have gently stepped up alongside her, making sure the tradition continues even as the family grows and spreads.
 
 ---
 
