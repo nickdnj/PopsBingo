@@ -570,6 +570,40 @@ body::before {
     bottom: auto;
 }
 
+/* Story Quote - for phonetic alphabet examples */
+.story-quote {
+    margin: 16px 0;
+    padding: 12px 20px;
+    background: rgba(255, 215, 0, 0.08);
+    border-left: 4px solid var(--christmas-gold);
+    border-radius: 0 8px 8px 0;
+}
+
+.story-quote p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #a8d5e5;
+}
+
+.story-quote p:first-child {
+    margin-top: 0;
+}
+
+.story-quote p:last-child {
+    margin-bottom: 0;
+}
+
+/* Story Photo Caption */
+.story-photo__caption {
+    display: block;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
 /* Story Dedication & GitHub Link */
 .story-dedication {
     text-align: center;

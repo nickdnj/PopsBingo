@@ -1267,6 +1267,40 @@ body {
   color: var(--snow-white);
 }
 
+/* Story Quote - for phonetic alphabet examples */
+.story-quote {
+  margin: 20px 0;
+  padding: 16px 24px;
+  background: rgba(255, 215, 0, 0.08);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.story-quote p {
+  margin: 8px 0;
+  font-size: 18px;
+  color: var(--ice-blue);
+}
+
+.story-quote p:first-child {
+  margin-top: 0;
+}
+
+.story-quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Story Photo Caption */
+.story-photo__caption {
+  display: block;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
 .story-github-link {
   margin-top: 24px;
   padding: 16px 20px;
