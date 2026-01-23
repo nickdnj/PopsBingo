@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+  <!-- Dark green background -->
+  <rect width="180" height="180" fill="#0d1f0d"/>
+
+  <!-- Christmas Tree - scaled and centered for 180x180 -->
+  <g transform="translate(40, 25) scale(1.0)">
+    <!-- Tree shape -->
+    <polygon points="50,8 20,45 35,45 15,70 30,70 10,95 90,95 70,70 85,70 65,45 80,45" fill="#228B22"/>
+
+    <!-- Tree trunk -->
+    <rect x="40" y="95" width="20" height="8" fill="#8B4513"/>
+
+    <!-- Star on top -->
+    <polygon points="50,5 52,12 60,12 54,17 56,25 50,20 44,25 46,17 40,12 48,12" fill="#FFD700"/>
+
+    <!-- Ornaments - slightly larger for visibility at small sizes -->
+    <circle cx="35" cy="55" r="6" fill="#FF0000"/>
+    <circle cx="55" cy="50" r="6" fill="#FFD700"/>
+    <circle cx="65" cy="70" r="6" fill="#FF0000"/>
+    <circle cx="40" cy="75" r="6" fill="#FFD700"/>
+    <circle cx="50" cy="85" r="6" fill="#FF0000"/>
+    <circle cx="30" cy="85" r="5" fill="#00CED1"/>
+    <circle cx="70" cy="85" r="5" fill="#00CED1"/>
+  </g>
+
+  <!-- "POP'S" text at bottom -->
+  <text x="90" y="158" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFD700" text-anchor="middle">POP'S</text>
+</svg>

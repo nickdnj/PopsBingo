@@ -1,0 +1,28 @@
+{
+  "name": "Pop's Christmas Bingo",
+  "short_name": "Pop's Bingo",
+  "description": "A family Christmas Bingo game with Pop's voice calling the numbers",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0d1f0d",
+  "background_color": "#0d1f0d"
+}
