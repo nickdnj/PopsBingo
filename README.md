@@ -52,7 +52,7 @@ Now at 87, Mom isn't one to easily step aside — and honestly, why would she? T
 
 ## ❄️ The Tradition Spreads
 
-As with all growing families, the holiday dynamic changes each year. Peggy's son **Kevin** now lives in upstate New York. My brother **Bud** and his family — **Eileen**, **Nicky**, **Ashley**, and **Joey** — still live near home and have been the heart of keeping this tradition alive, gathering every Christmas Eve to carry on what Nana Mae started.
+As with all growing families, the holiday dynamic changes each year. Peggy's son **Kevin** now lives in upstate New York. My brother **Bud** and **Eileen's** family — **Nicky**, **Ashley**, and **Joey** — still live near home and have been the heart of keeping this tradition alive, gathering every Christmas Eve to carry on what Nana Mae started.
 
 At Thanksgiving 2024, Kevin's family couldn't make it for Christmas Eve, so Mom, Dad, Cathie, and I drove up to his house in Glens Falls, NY with Peggy — and we played Bingo.
 
