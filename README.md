@@ -54,7 +54,7 @@ Now at 87, Mom isn't one to easily step aside — and honestly, why would she? T
 
 As with all growing families, the holiday dynamic changes each year. Peggy's son **Kevin** now lives in upstate New York. My brother **Bud's** kids — **Nicky**, **Ashley**, and **Joey** — still live near home and gather for Christmas Eve.
 
-At Thanksgiving 2023, Mom, Dad, Cathie, and I drove up to Kevin's house in Glens Falls, NY with Peggy — and we played Bingo. Meanwhile, Bud's family gathered back home for their own holiday gathering, likely with their own game of Bingo going.
+At Thanksgiving 2024, Mom, Dad, Cathie, and I drove up to Kevin's house in Glens Falls, NY with Peggy — and we played Bingo. Meanwhile, Bud's family gathered back home for their own holiday gathering, likely with their own game of Bingo going.
 
 What started as one family around one table has become multiple families, multiple gatherings, multiple games — all connected by the same tradition Nana Mae started decades ago.
 
