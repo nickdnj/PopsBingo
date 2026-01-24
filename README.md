@@ -6,6 +6,18 @@
 
 ---
 
+## 🎮 The App
+
+![Pop's Bingo in action](screenshots/app-in-progress.png)
+
+*The Bingo caller in action — Pop's voice calls each number as the board lights up.*
+
+![Mobile Bingo Card](screenshots/card.png)
+
+*Players can scan the QR code to get their own mobile bingo card.*
+
+---
+
 ## ❄️ A Long Island Christmas
 
 I grew up in Long Island, New York, raised by an Italian father and an Irish mother whose roots ran deep through my grandmother, **Nana**.
