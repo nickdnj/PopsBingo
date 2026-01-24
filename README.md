@@ -12,9 +12,9 @@
 
 *The Bingo caller in action — Pop's voice calls each number as the board lights up.*
 
-![Mobile Bingo Card](screenshots/card.png)
+![Mobile Bingo Card on iPhone](screenshots/card-iphone.png)
 
-*Players can scan the QR code to get their own mobile bingo card.*
+*Players scan the QR code to get their own mobile bingo card — works great on any phone.*
 
 ---
 
