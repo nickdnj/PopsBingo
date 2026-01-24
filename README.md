@@ -58,7 +58,7 @@ At Thanksgiving 2024, Kevin's family couldn't make it for Christmas Eve, so Mom,
 
 What started as one family around one table has become multiple families, multiple gatherings, multiple games — all connected by the same tradition Nana Mae started decades ago.
 
-And the circle keeps growing. My nieces and nephews, their spouses and significant others — they're not just winning prizes now, they're buying them too. Everyone's part of the tradition. Everyone's part of the process.
+And the circle keeps growing. Kevin has two kids now. Nicky has two kids of his own, and his wonderful girlfriend brings her kids too — a blended family forming around the Bingo table. Ashley is married. Joey just got engaged. They're not just winning prizes now, they're buying them too. Everyone's part of the tradition. Everyone's part of the process.
 
 ---
 
