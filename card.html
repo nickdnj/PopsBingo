@@ -262,23 +262,13 @@
       </div>
     </div>
 
-    <!-- Firebase SDK -->
-    <script type="module">
-      import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js';
-      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js';
-
-      const firebaseConfig = {
-        apiKey: "AIzaSyB_i5KYQdML8ouqSq5pyisLEzEJRp05rgo",
-        authDomain: "pops-bingo.firebaseapp.com",
-        projectId: "pops-bingo",
-        storageBucket: "pops-bingo.firebasestorage.app",
-        messagingSenderId: "1009973000850",
-        appId: "1:1009973000850:web:dfd64d0f187a6e5bc7044b",
-        measurementId: "G-EXQX0C3RRM"
-      };
-
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXQX0C3RRM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EXQX0C3RRM');
     </script>
 
     <script src="scripts/card.js?v=4"></script>
