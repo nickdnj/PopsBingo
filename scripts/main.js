@@ -360,12 +360,21 @@ async function loadVoiceFiles() {
   // Wait for all files to attempt loading
   await Promise.all(loadPromises);
   
+  // Load HANGUP clip for game-over announcement
+  try {
+    const resp = await fetch(`${audioPath}/HANGUP.wav`);
+    if (resp.ok) {
+      const blob = await resp.blob();
+      voicePack.files.set('HANGUP', new Audio(URL.createObjectURL(blob)));
+    }
+  } catch (e) { /* optional */ }
+
   voicePack.count = loadedCount;
   voicePack.loaded = loadedCount > 0;
-  
+
   updateVoiceStatus(loadedCount);
   console.log(`🎙️ Voice files loaded: ${loadedCount}/75`);
-  
+
   return loadedCount;
 }
 
@@ -504,7 +513,9 @@ function showStatus(message, duration = 3000) {
 function callNextNumber() {
   if (callOrder.length === 0) {
     showStatus('🎉 All 75 numbers have been called! Click "New Game" to play again.');
-    playSound('bingo');
+    const hangup = voicePack.files.get('HANGUP');
+    if (hangup) { hangup.currentTime = 0; hangup.play().catch(() => {}); }
+    else { playSound('bingo'); }
     return;
   }
 
@@ -528,7 +539,9 @@ function callNextNumber() {
   if (callOrder.length === 0) {
     setTimeout(() => {
       showStatus('🎅 Ho Ho Ho! All numbers called! What a game!', 5000);
-      playSound('bingo');
+      const hangup = voicePack.files.get('HANGUP');
+    if (hangup) { hangup.currentTime = 0; hangup.play().catch(() => {}); }
+    else { playSound('bingo'); }
     }, 1000);
   }
 }
