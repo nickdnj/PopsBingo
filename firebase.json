@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "pops-bingo",
     "public": ".",
     "ignore": [
       "firebase.json",

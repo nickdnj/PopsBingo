@@ -396,18 +396,20 @@ function updateVoiceStatus(count) {
 }
 
 // Play voice clip for a specific call
-function playVoiceCall(number) {
+// When isRepeat is false (new number), play the clip twice like Pop did.
+// When isRepeat is true, play it once.
+function playVoiceCall(number, isRepeat) {
   const letter = getLetterForNumber(number);
   const label = `${letter}${number}`;
   const audio = voicePack.files.get(label);
-  
+
   if (audio) {
     // Stop any currently playing voice clip
     voicePack.files.forEach(a => {
       a.pause();
       a.currentTime = 0;
     });
-    
+
     audio.currentTime = 0;
     audio.play().catch(err => {
       // Detailed error logging for debugging iOS issues
@@ -420,6 +422,18 @@ function playVoiceCall(number) {
       });
       playFallbackSound('call');
     });
+
+    // New calls: play a second time after the first clip ends
+    if (!isRepeat) {
+      audio.onended = function () {
+        audio.onended = null;
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      };
+    } else {
+      audio.onended = null;
+    }
+
     return true;
   } else {
     console.warn(`No audio loaded for ${label}. voicePack.loaded=${voicePack.loaded}, count=${voicePack.count}`);
@@ -457,10 +471,10 @@ function playFallbackSound(type) {
 }
 
 // Play sound effect
-function playSound(type, number = null) {
+function playSound(type, number = null, isRepeat = false) {
   // For call sounds, try voice pack first
   if (type === 'call' && number !== null && voicePack.loaded) {
-    if (playVoiceCall(number)) {
+    if (playVoiceCall(number, isRepeat)) {
       return; // Voice clip played successfully
     }
   }
@@ -529,7 +543,7 @@ function repeatCurrentNumber() {
   const number = calledNumbers[calledNumbers.length - 1];
   const letter = getLetterForNumber(number);
   showStatus(`🔁 ${letter}-${number}!`, 2000);
-  playSound('call', number);
+  playSound('call', number, true);
 }
 
 // Reset the game
