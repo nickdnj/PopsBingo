@@ -61,6 +61,23 @@ body {
     letter-spacing: 0.05em;
 }
 
+.emu-header__story-link {
+    margin-top: 0.75rem;
+}
+
+.emu-header__story-link a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.emu-header__story-link a:hover {
+    color: var(--snow-white);
+    text-decoration: underline;
+}
+
 /* ── Audio Notice ── */
 .audio-notice {
     max-width: 640px;
