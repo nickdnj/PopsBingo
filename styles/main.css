@@ -1708,3 +1708,67 @@ body {
   font-family: "SF Mono", Monaco, monospace;
   letter-spacing: 0.5px;
 }
+
+/* ========================================
+   Emulator Launch Button
+   ======================================== */
+.emulator-launch-block {
+  margin-top: 24px;
+}
+
+.emulator-launch-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.15), rgba(139, 69, 19, 0.1));
+  border: 2px solid rgba(196, 30, 58, 0.3);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.emulator-launch-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(196, 30, 58, 0.6);
+  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.3);
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.25), rgba(139, 69, 19, 0.15));
+}
+
+.emulator-launch-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.emulator-launch-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.emulator-launch-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.emulator-launch-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.emulator-launch-arrow {
+  font-size: 1.2rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.emulator-launch-btn:hover .emulator-launch-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}

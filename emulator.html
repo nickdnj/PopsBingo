@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad's Demo Laptop — Pop's Bingo</title>
+    <meta name="description" content="Experience Pop's original DOS software in your browser — MS-DOS 5.0 with Big Mouth voice card running Bingo, Golf, and QTS-AIR.">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/emulator.css" />
+    <link rel="stylesheet" href="https://v8.js-dos.com/latest/js-dos.css">
+    <script src="https://v8.js-dos.com/latest/js-dos.js"></script>
+</head>
+<body>
+
+<header class="emu-header">
+    <h1 class="emu-header__title">Dad's Demo Laptop</h1>
+    <p class="emu-header__subtitle">Halikan 286 Luggable &middot; MS-DOS 5.0 &middot; Big Mouth Voice Card</p>
+</header>
+
+<div class="audio-notice">
+    <strong>Sound required:</strong> The Big Mouth voice card plays audio through your speakers.
+    Click inside the emulator if audio doesn't start — browsers require a user interaction first.
+</div>
+
+<div id="emulator-wrapper">
+    <div id="jsdos"></div>
+    <div id="phone-panel">
+        <div class="phone-body">
+            <div class="phone-brand">TOUCH-TONE</div>
+            <div class="phone-display" id="phone-display">&nbsp;</div>
+            <div class="phone-keypad">
+                <button type="button" class="phone-key" data-key="1" tabindex="-1"><span class="key-num">1</span></button>
+                <button type="button" class="phone-key" data-key="2" tabindex="-1"><span class="key-num">2</span><span class="key-alpha">ABC</span></button>
+                <button type="button" class="phone-key" data-key="3" tabindex="-1"><span class="key-num">3</span><span class="key-alpha">DEF</span></button>
+                <button type="button" class="phone-key" data-key="4" tabindex="-1"><span class="key-num">4</span><span class="key-alpha">GHI</span></button>
+                <button type="button" class="phone-key" data-key="5" tabindex="-1"><span class="key-num">5</span><span class="key-alpha">JKL</span></button>
+                <button type="button" class="phone-key" data-key="6" tabindex="-1"><span class="key-num">6</span><span class="key-alpha">MNO</span></button>
+                <button type="button" class="phone-key" data-key="7" tabindex="-1"><span class="key-num">7</span><span class="key-alpha">PRS</span></button>
+                <button type="button" class="phone-key" data-key="8" tabindex="-1"><span class="key-num">8</span><span class="key-alpha">TUV</span></button>
+                <button type="button" class="phone-key" data-key="9" tabindex="-1"><span class="key-num">9</span><span class="key-alpha">WXY</span></button>
+                <button type="button" class="phone-key" data-key="*" tabindex="-1"><span class="key-num">&#x2731;</span></button>
+                <button type="button" class="phone-key" data-key="0" tabindex="-1"><span class="key-num">0</span><span class="key-alpha">OPER</span></button>
+                <button type="button" class="phone-key" data-key="#" tabindex="-1"><span class="key-num">#</span></button>
+            </div>
+            <div class="phone-actions">
+                <button type="button" class="phone-action phone-answer" data-key=" " tabindex="-1">ANSWER</button>
+                <button type="button" class="phone-action phone-hangup" data-key="Escape" tabindex="-1">HANG UP</button>
+            </div>
+        </div>
+        <p class="phone-caption">Dial into the QTS-AIR Telephone Demo</p>
+    </div>
+</div>
+
+<div class="controls">
+    <div class="group">
+        <h3>Navigation</h3>
+        <p><kbd>&uarr;</kbd> <kbd>&darr;</kbd> Move &middot; <kbd>Enter</kbd> Select &middot; <kbd>Esc</kbd> Back</p>
+    </div>
+    <div class="group">
+        <h3>Bingo</h3>
+        <p><kbd>Space</kbd> Call number &middot; <kbd>Q</kbd> Quit to menu</p>
+    </div>
+    <div class="group">
+        <h3>Emulator</h3>
+        <p>Click to focus &middot; <kbd>Ctrl</kbd>+<kbd>Enter</kbd> Fullscreen</p>
+    </div>
+</div>
+
+<footer class="emu-footer">
+    <p><a href="index.html">&larr; Back to Pop's Bingo</a></p>
+    <p class="emu-footer__tech">Built with <a href="https://js-dos.com" target="_blank" rel="noopener">js-dos v8</a> (DOSBox in WebAssembly)</p>
+</footer>
+
+<script>
+    Dos(document.getElementById("jsdos"), {
+        url: "emulator/dads-laptop.jsdos",
+        backend: "dosbox",
+        backendLocked: true,
+        autoStart: true,
+        theme: "dark",
+        imageRendering: "pixelated",
+        renderAspect: "4/3",
+        volume: 1.0,
+        noNetworking: true,
+        noCloud: true,
+        kiosk: false,
+        thinSidebar: true
+    });
+
+    /* -- Touch-Tone Phone -- */
+    (function () {
+        'use strict';
+
+        /* DTMF tone generator (Web Audio API) */
+        var audioCtx;
+        var DTMF = {
+            '1':[697,1209],'2':[697,1336],'3':[697,1477],
+            '4':[770,1209],'5':[770,1336],'6':[770,1477],
+            '7':[852,1209],'8':[852,1336],'9':[852,1477],
+            '*':[941,1209],'0':[941,1336],'#':[941,1477]
+        };
+        function playTone(key) {
+            var freqs = DTMF[key];
+            if (!freqs) return;
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var t = audioCtx.currentTime, dur = 0.12;
+            var gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.12, t);
+            gain.gain.linearRampToValueAtTime(0, t + dur);
+            gain.connect(audioCtx.destination);
+            freqs.forEach(function (f) {
+                var osc = audioCtx.createOscillator();
+                osc.type = 'sine';
+                osc.frequency.value = f;
+                osc.connect(gain);
+                osc.start(t);
+                osc.stop(t + dur);
+            });
+        }
+
+        /* Key dispatch -- send keystroke into js-dos emulator */
+        var KEY_MAP = {
+            '0':{key:'0',code:'Digit0',keyCode:48},
+            '1':{key:'1',code:'Digit1',keyCode:49},
+            '2':{key:'2',code:'Digit2',keyCode:50},
+            '3':{key:'3',code:'Digit3',keyCode:51},
+            '4':{key:'4',code:'Digit4',keyCode:52},
+            '5':{key:'5',code:'Digit5',keyCode:53},
+            '6':{key:'6',code:'Digit6',keyCode:54},
+            '7':{key:'7',code:'Digit7',keyCode:55},
+            '8':{key:'8',code:'Digit8',keyCode:56},
+            '9':{key:'9',code:'Digit9',keyCode:57},
+            '*':{key:'*',code:'Digit8',keyCode:56,shiftKey:true},
+            '#':{key:'#',code:'Digit3',keyCode:51,shiftKey:true},
+            ' ':{key:' ',code:'Space',keyCode:32},
+            'Escape':{key:'Escape',code:'Escape',keyCode:27}
+        };
+
+        function sendKey(ch) {
+            var props = KEY_MAP[ch];
+            if (!props) return;
+            var jsdos = document.getElementById('jsdos');
+            var target = jsdos.querySelector('canvas') || jsdos;
+            var opts = Object.assign({}, props, {bubbles:true, cancelable:true});
+
+            /* For * and # send explicit Shift down/up around the key */
+            if (props.shiftKey) {
+                target.dispatchEvent(new KeyboardEvent('keydown',
+                    {key:'Shift',code:'ShiftLeft',keyCode:16,shiftKey:true,bubbles:true}));
+            }
+            target.dispatchEvent(new KeyboardEvent('keydown', opts));
+            setTimeout(function () {
+                target.dispatchEvent(new KeyboardEvent('keyup', opts));
+                if (props.shiftKey) {
+                    target.dispatchEvent(new KeyboardEvent('keyup',
+                        {key:'Shift',code:'ShiftLeft',keyCode:16,shiftKey:false,bubbles:true}));
+                }
+            }, 80);
+        }
+
+        /* Display */
+        var display = document.getElementById('phone-display');
+        var digits = '';
+        function updateDisplay(ch) {
+            if (ch === 'Escape') { digits = ''; }
+            else if (ch !== ' ') {
+                digits += ch;
+                if (digits.length > 12) digits = digits.slice(-12);
+            }
+            display.textContent = digits || '\u00A0';
+        }
+
+        /* Button handling (delegated) */
+        var panel = document.getElementById('phone-panel');
+        panel.addEventListener('mousedown', function (e) {
+            if (e.target.closest('button')) e.preventDefault();
+        });
+        panel.addEventListener('click', function (e) {
+            var btn = e.target.closest('button[data-key]');
+            if (!btn) return;
+            var k = btn.dataset.key;
+            playTone(k);
+            sendKey(k);
+            updateDisplay(k);
+            btn.classList.add('pressed');
+            setTimeout(function () { btn.classList.remove('pressed'); }, 150);
+        });
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+/* ========================================
+   Dad's Demo Laptop — Emulator Page
+   Styled to match PopsBingo Christmas theme
+   ======================================== */
+
+:root {
+    --bg-dark: #1a2332;
+    --bg-darker: #141c28;
+    --gold: #ffd700;
+    --gold-soft: #d4af37;
+    --candy-red: #dc143c;
+    --sidebar-red: #c41e3a;
+    --ice-blue: #a8d5e5;
+    --snow-white: #f8f9fa;
+    --text-primary: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --border-subtle: rgba(255, 255, 255, 0.1);
+    --dos-green: #33ff33;
+    --font-display: "Mountains of Christmas", cursive;
+    --font-body: "Nunito", system-ui, -apple-system, sans-serif;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ── Header ── */
+.emu-header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    max-width: 800px;
+}
+
+.emu-header__title {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 2px 20px rgba(255, 215, 0, 0.4);
+    margin-bottom: 0.3rem;
+}
+
+.emu-header__subtitle {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: var(--dos-green);
+    letter-spacing: 0.05em;
+}
+
+/* ── Audio Notice ── */
+.audio-notice {
+    max-width: 640px;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    background: rgba(196, 30, 58, 0.15);
+    border: 1px solid var(--candy-red);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.audio-notice strong {
+    color: var(--candy-red);
+}
+
+/* ── Emulator + Phone Layout ── */
+#emulator-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+#jsdos {
+    flex: 1;
+    min-width: 0;
+    aspect-ratio: 4 / 3;
+    background: #000;
+    border: 2px solid rgba(255, 215, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* ── Keyboard Hints ── */
+.controls {
+    max-width: 960px;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.controls .group {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+}
+
+.controls .group h3 {
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--dos-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.4rem;
+}
+
+.controls .group p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+kbd {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding: 0.1em 0.4em;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    color: var(--text-primary);
+}
+
+/* ── Footer ── */
+.emu-footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 640px;
+}
+
+.emu-footer a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.emu-footer a:hover {
+    color: var(--candy-red);
+    text-decoration: underline;
+}
+
+.emu-footer__tech {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.emu-footer__tech a {
+    color: var(--ice-blue);
+    font-weight: 400;
+}
+
+/* ========================================
+   Touch-Tone Phone Widget
+   (ported from DadsDemoLaptop)
+   ======================================== */
+#phone-panel {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.phone-body {
+    background: linear-gradient(170deg, #d4c8ac 0%, #c2b494 100%);
+    border-radius: 18px;
+    padding: 20px 18px 18px;
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.4),
+        inset 0 1px 0 rgba(255,255,255,0.25),
+        inset 0 -1px 0 rgba(0,0,0,0.1);
+    border: 1px solid #8a7d6b;
+}
+
+.phone-brand {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #6b6050;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.phone-display {
+    background: #0c1a0c;
+    border: 2px inset #555;
+    border-radius: 3px;
+    padding: 8px 10px;
+    margin-bottom: 14px;
+    text-align: right;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: #33ff33;
+    min-height: 38px;
+    letter-spacing: 3px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.phone-keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.phone-key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 4px 5px;
+    min-height: 52px;
+    background: linear-gradient(180deg, #f2ece0 0%, #ddd6c4 50%, #d0c8b4 100%);
+    border: 1px solid #a09880;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow:
+        0 3px 1px rgba(0,0,0,0.15),
+        0 1px 0 rgba(255,255,255,0.6) inset;
+    transition: transform 0.06s, box-shadow 0.06s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.phone-key:active, .phone-key.pressed {
+    transform: translateY(2px);
+    box-shadow:
+        0 1px 0 rgba(0,0,0,0.1),
+        0 1px 2px rgba(0,0,0,0.1) inset;
+    background: linear-gradient(180deg, #ddd6c4 0%, #d0c8b4 100%);
+}
+
+.key-num {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.key-alpha {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #555;
+    margin-top: 1px;
+}
+
+.phone-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.phone-action {
+    flex: 1;
+    padding: 10px 6px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: filter 0.1s, transform 0.06s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.phone-action:active, .phone-action.pressed {
+    transform: translateY(1px);
+    filter: brightness(0.85);
+}
+
+.phone-answer {
+    background: linear-gradient(180deg, #3da84e 0%, #2d8f3e 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.phone-hangup {
+    background: linear-gradient(180deg, #d44 0%, #b22 100%);
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.phone-caption {
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    #emulator-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    #phone-panel {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .emu-header__title {
+        font-size: 1.8rem;
+    }
+    .emu-header__subtitle {
+        font-size: 0.75rem;
+    }
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
