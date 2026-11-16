@@ -49,7 +49,8 @@
     if (qr) {
       // point at the page actually being served (preview channel etc.); keep production URL on localhost
       var base = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? 'https://pops-bingo.web.app' : location.origin;
-      qr.src = qr.src.replace(/data=[^&]*/, 'data=' + encodeURIComponent(base + '/card.html?theme=thanksgiving'));
+      qr.src = qr.src.replace(/data=[^&]*/, 'data=' + encodeURIComponent(base + '/card.html?theme=thanksgiving'))
+        .replace('bgcolor=0d1f0d', 'bgcolor=2a160a').replace('color=ffd700', 'color=f4b13a');
     }
   });
 })();
