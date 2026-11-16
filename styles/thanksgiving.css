@@ -62,3 +62,18 @@ html[data-theme="thanksgiving"] .logo__subtitle { font-size: 0.62em; letter-spac
 
 /* card page: story modal (hardcoded green in card.css) */
 html[data-theme="thanksgiving"] .story-modal__container { background: linear-gradient(145deg, #4a2c14 0%, #2a160a 100%); border-color: rgba(244, 177, 58, 0.4); }
+
+/* Called-number marker: the per-row number colors (blue/pink/purple/green/orange) were
+   overriding the dark text and clashing with the amber marker. Use one cream marker with
+   dark brown text so every row reads clearly. */
+html[data-theme="thanksgiving"] .board__cell--called,
+html[data-theme="thanksgiving"] .board__cell--called[data-row] {
+  background: #fff4d6;
+  color: #2a160a;
+  text-shadow: none;
+  box-shadow: 0 0 14px rgba(255, 244, 214, 0.55), inset 0 0 0 3px #d9731f;
+}
+html[data-theme="thanksgiving"] .board__cell--latest {
+  box-shadow: 0 0 26px rgba(255, 244, 214, 0.9), inset 0 0 0 3px #d9731f;
+}
+html[data-theme="thanksgiving"] .mini-card__cell--marked { background: #fff4d6; color: #2a160a; box-shadow: inset 0 0 0 2px #d9731f; }
