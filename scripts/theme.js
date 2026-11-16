@@ -18,6 +18,16 @@
   window.POPS_THEME = 'thanksgiving';
   window.POPS_EMOJI = '🦃';
 
+  // Home-screen / tab icons and manifest (read by the browser when adding to home screen)
+  function relink(rel, href, type) {
+    var els = document.querySelectorAll('link[rel="' + rel + '"]');
+    if (!els.length) return;
+    els.forEach(function (l) { l.href = href; if (type) l.type = type; });
+  }
+  relink('icon', 'assets/icon-thanksgiving.svg', 'image/svg+xml');
+  relink('apple-touch-icon', 'assets/apple-touch-icon-thanksgiving.png');
+  relink('manifest', 'manifest-thanksgiving.json');
+
   var font = document.createElement('link');
   font.rel = 'stylesheet';
   font.href = 'https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500;700&display=swap';
