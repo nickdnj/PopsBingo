@@ -1,0 +1,61 @@
+/* Pop's Thanksgiving Bingo - autumn skin. Active only when <html data-theme="thanksgiving">. */
+html[data-theme="thanksgiving"] {
+  /* caller page palette */
+  --bg-dark: #2a1a10;
+  --bg-darker: #1c110a;
+  --sidebar-bg: #b5541c;
+  --sidebar-accent: #7a3412;
+  --gold: #f4b13a;
+  --gold-soft: #d89a2b;
+  --snow-white: #fff4e0;
+  --ice-blue: #f0c987;
+  --pine-green: #6b8e23;
+  --holly-green: #5a3a1a;
+  --candy-red: #c0392b;
+  --warm-glow: #fff0d2;
+  --shadow-glow: 0 0 30px rgba(244, 177, 58, 0.3);
+  --font-display: "Sansita Swashed", "Mountains of Christmas", cursive;
+  /* card page palette */
+  --christmas-red: #b5541c;
+  --christmas-green: #5a3a1a;
+  --christmas-gold: #f4b13a;
+  --card-bg: #2a160a;
+  --cell-bg: #4a2c14;
+  --cell-marked: #f4b13a;
+  --cell-marked-text: #3a1f0c;
+  --free-space: #b5541c;
+}
+html[data-theme="thanksgiving"] body { background: linear-gradient(135deg, #2a1a10 0%, #1c110a 100%); }
+html[data-theme="thanksgiving"] .card-container,
+html[data-theme="thanksgiving"] body.card-page { background: none; }
+
+/* Falling leaves instead of snow */
+html[data-theme="thanksgiving"] .snowfall { display: none; }
+html[data-theme="thanksgiving"] body::after {
+  content: "🍂 🍁 🍂 🍁 🍂";
+  position: fixed; top: -40px; left: 0; right: 0;
+  font-size: 22px; letter-spacing: 18vw; white-space: nowrap; overflow: hidden;
+  pointer-events: none; opacity: 0.35; z-index: 100;
+  animation: leaffall 18s linear infinite;
+}
+@keyframes leaffall { 0% { transform: translateY(-40px); } 100% { transform: translateY(105vh); } }
+@media (prefers-reduced-motion: reduce) { html[data-theme="thanksgiving"] body::after { animation: none; display: none; } }
+
+/* caller garland + section markers */
+html[data-theme="thanksgiving"] .sidebar::before { content: "🦃 🍂 🎃 🍂 🌽 🍂 🎃 🍂 🦃"; }
+html[data-theme="thanksgiving"] .story-section__title::before { content: "🍂 "; }
+
+/* card page */
+html[data-theme="thanksgiving"] body { background: linear-gradient(135deg, #1c110a 0%, #4a2c14 50%, #1c110a 100%); }
+html[data-theme="thanksgiving"] .letter-b,
+html[data-theme="thanksgiving"] .letter-n,
+html[data-theme="thanksgiving"] .letter-o { background: linear-gradient(135deg, #c8641e, #7a3412); }
+html[data-theme="thanksgiving"] .letter-i,
+html[data-theme="thanksgiving"] .letter-g { background: linear-gradient(135deg, #7a5a1a, #4a3510); }
+html[data-theme="thanksgiving"] .card-header h1 { font-family: var(--font-display); }
+
+/* hardcoded Christmas reds -> pumpkin */
+html[data-theme="thanksgiving"] .btn--primary { background: linear-gradient(135deg, #d9731f, #9a4a14); }
+
+/* "Thanksgiving" is longer than "Christmas": keep it inside the sidebar */
+html[data-theme="thanksgiving"] .logo__subtitle { font-size: 0.62em; letter-spacing: 0; white-space: nowrap; }

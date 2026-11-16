@@ -3,6 +3,9 @@
  * A festive tribute to family game nights
  */
 
+// Visual theme only (set by scripts/theme.js); never affects number calling
+const THANKSGIVING = window.POPS_THEME === 'thanksgiving';
+
 // Bingo column definitions
 const BINGO_COLUMNS = {
   B: { numbers: Array.from({ length: 15 }, (_, i) => i + 1), color: '#2196f3' },
@@ -225,7 +228,7 @@ function buildCallOrder() {
   updateHistory();
   updateCurrentCall(null);
   
-  showStatus('🎄 Merry Christmas! Click "Call Number" to start!');
+  showStatus(THANKSGIVING ? '🦃 Happy Thanksgiving! Click "Call Number" to start!' : '🎄 Merry Christmas! Click "Call Number" to start!');
 }
 
 // Update stats display
@@ -261,7 +264,7 @@ function updateBoard(latestNumber) {
 // Update current call display
 function updateCurrentCall(number) {
   if (number === null) {
-    elements.currentLetter.textContent = '🎄';
+    elements.currentLetter.textContent = THANKSGIVING ? '🦃' : '🎄';
     elements.currentNumber.textContent = '';
     elements.currentBall.classList.add('history__current-ball--waiting');
   } else {
@@ -538,7 +541,7 @@ function callNextNumber() {
   // Check if all numbers called
   if (callOrder.length === 0) {
     setTimeout(() => {
-      showStatus('🎅 Ho Ho Ho! All numbers called! What a game!', 5000);
+      showStatus(THANKSGIVING ? '🦃 Gobble gobble! All numbers called! What a game!' : '🎅 Ho Ho Ho! All numbers called! What a game!', 5000);
       const hangup = voicePack.files.get('HANGUP');
     if (hangup) { hangup.currentTime = 0; hangup.play().catch(() => {}); }
     else { playSound('bingo'); }
@@ -565,7 +568,7 @@ function resetSession() {
   generateMiniCard();
   // Disable repeat button since no number has been called yet
   elements.repeatBtn.disabled = true;
-  showStatus('🎄 New game started! Let\'s play Bingo!');
+  showStatus((THANKSGIVING ? '🦃' : '🎄') + ' New game started! Let\'s play Bingo!');
 }
 
 
